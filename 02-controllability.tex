@@ -1,0 +1,177 @@
+\section{Contrôlabilité de l'équation de la chaleur rétrograde}
+
+On interprète la problème~\eqref{eq:initial-problem} comme un problème
+inverse; on considère le système
+\begin{equation}\label{eq:inverse-problem-1}
+    \begin{cases}\displaystyle
+        \begin{array}{rl}
+            \primetemps{y} - \Delta y = v & \text{dans}\ Q,\\
+            \\
+            y = 0 & \text{sur}\ \Sigma,
+        \end{array}
+    \end{cases}
+\end{equation}
+se posant le problème de trouver $\displaystyle y_{0}\in\Ldeux{\Omega}$ tel
+que si
+\begin{equation}\label{eq:inverse-problem-2}
+    \begin{cases}\displaystyle
+        \begin{array}{rl}
+            \primetemps{y} - \Delta y = v & \text{dans}\ Q,\\
+            \\
+            y = 0 & \text{sur}\ \Sigma,\\
+            \\
+            \condinitiale{y} = y_{0} & \text{dans}\ \Omega,
+        \end{array}
+    \end{cases}
+\end{equation}
+alors
+\begin{equation}\label{eq:inverse-problem-3}
+    \condfinale{y} = 0\quad\text{dans}\ \Omega.
+\end{equation}
+On dit que~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3}
+constitue un problème de contrôlabilité exacte associée au
+problème~\eqref{eq:initial-problem}.
+
+\begin{remarque}%
+    Le problème de contrôlabilité est bien défini. En effet, pour tous
+    $v\in\Ldeux{Q}$ et $y_{0}\in\Ldeux{\Omega}$, on sait que l'équation de
+    la chaleur~\eqref{eq:inverse-problem-2} est bien posé au sens de
+    Hadamard. Soit qu'elle admet une solution unique
+    \begin{equation}\label{eq:well-posedness-heat-equation}
+        y\!\left({v,y_{0}}\right)\in \Ldeux{0,T; H_{0}^{1}(\Omega)}\cap
+        \Cscr\!\left({[0,T];\Ldeux{\Omega}}\right)
+    \end{equation}
+    dépendant continûment des données. On en déduit, qu'après modification
+    éventuelle sur un ensemble de mesure nulle, la solution
+    $y\!\left({v,y_{0}}\right)$ de~\eqref{eq:inverse-problem-2} se confond
+    à une fonction continue de $[0,T]$ dans $\Ldeux{\Omega}$. De sorte
+    qu'on peut bien parler de la valeur terminale
+    $y\!\left({\cdot,T;v,y_{0}}\right)$ de $y\!\left({v,y_{0}}\right)$ dans
+    $\Omega$.
+\end{remarque}
+
+\begin{remarque}%
+    De plus, l'application
+    \begin{equation}
+        \left({v,y_{0}}\right)\longmapsto y\!\left({v,y_{0}}\right) =
+        y(v,0) + y\!\left({0,y_{0}}\right)
+    \end{equation}
+    étant linéaire continue de $\Ldeux{Q}\times\Ldeux{\Omega}$ dans
+    $\Ldeux{0,T;H_{0}^{1}(\Omega)}\cap \Cscr\!\left({%
+        [0,T];\Ldeux{\Omega}
+    }\right)\subset\Ldeux{Q}$, le problème de contrôlabilité
+    exacte~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3} est
+    équivalent à celui consistant à trouver $y_{0}\in\Ldeux{\Omega}$ tel
+    que, si
+    \begin{equation}\label{eq:default-inverse-problem}
+        \begin{cases}\displaystyle
+            \begin{array}{rl}
+                \primetemps{y} - \Delta y = 0 & \text{dans}\ Q,\\
+                \\
+                y = 0 & \text{sur}\ \Sigma,\\
+                \\
+                y\!\left({\cdot,y_{0}}\right) = 0 & \text{dans}\ \Omega,
+            \end{array}
+        \end{cases}
+    \end{equation}
+    alors $y$ satisfait~\eqref{eq:inverse-problem-3}.
+\end{remarque}
+
+On approche, par argument de densité, le problème de contrôlabilité
+exacte~\eqref{eq:default-inverse-problem}\eqref{eq:inverse-problem-3}, par
+un problème, dit de contrôlabilité approchée et en réponse de quoi on a le
+résultat suivant.
+
+\begin{proposition}\label{propo:controllability-result-1}%
+    Notons
+    \begin{equation}\label{eq:controllability-result-1}
+        E = \left\{{%
+            y(\cdot,T)\,;\ y_{0}\in\Ldeux{\Omega}
+        }\right\}
+    \end{equation}
+    l'ensemble des valeurs terminales de $y$, solution unique
+    de~\eqref{eq:default-inverse-problem}, lorsque la donnée initiale
+    $y_{0}$ parcourt $\Ldeux{\Omega}$. Alors l'ensemble $E$ est dense dans
+    $\Ldeux{\Omega}$.
+\end{proposition}
+
+\begin{proof}%
+    On a clairement que $E$ est un sous-espace vectoriel de
+    $\Ldeux{\Omega}$. D'où, par le Théorème de Hahn-Banach, $E$ est dense
+    dans $\Ldeux{\Omega}$ si et seulement si $E^{\perp} = \{0\}$.
+
+    Soit $k\in E^{\perp}$; on a
+    \begin{equation}\label{eq:proof-controllability-26}
+        \forall\,y_{0}\in\Ldeux{\Omega},\qquad \scalaireohm{k}{y(\cdot,T)}
+        = 0.
+    \end{equation}
+    Mais, de~\eqref{eq:default-inverse-problem}, on a pour toute fonction
+    test $\vphi\in\Dscr(Q)$, que:
+    \begin{equation*}
+        \begin{split}
+            \scalaireq{\primetemps{y} - \Delta y}{\vphi} = 0 &\iff
+            \scalaireq{\primetemps{y}}{\vphi} - \scalaireq{\Delta y}{\vphi}
+            = 0\\
+            &\iff \scalaireq{\primetemps{y}}{\vphi} - \scalaireq{\Delta
+            y}{\vphi} = 0.
+        \end{split}
+    \end{equation*}
+\end{proof}
+
+On en déduit le corollaire suivant.
+
+\begin{corollaire}\label{coro:controllability-result-2}%
+    Pour tout $\veps > 0$, il existe ${y_{0}}_{\veps}\in\Ldeux{\Omega}$ tel
+    que la solution
+    \begin{equation}\label{eq:controllability-result-2}
+        y_{\veps}\in \Ldeux{0,T;H_{0}^{1}(\Omega)}\cap
+        \Cscr\!\left({O,T;\Ldeux{\Omega}}\right)
+    \end{equation}
+    de
+    \begin{equation}\label{eq:controllability-result-3}
+        \begin{cases}\displaystyle
+            \begin{array}{rl}
+                \primetemps{y_{\veps}} - \Delta y_{\veps} = v &
+                \text{dans}\ Q,\\
+                \\
+                y_{\veps} = 0 & \text{sur}\ \Sigma,\\
+                \\
+                y_{\veps}\!\left({\cdot,0}\right) = {y_{0}}_{\veps} &
+                \text{dans}\ \Omega,
+            \end{array}
+        \end{cases}
+    \end{equation}
+    satisfait
+    \begin{equation}\label{eq:controllability-result-4}
+        \normeohm{y_{\veps}\!\left({\cdot,T}\right)} < \veps.
+    \end{equation}
+\end{corollaire}
+
+De plus, on a le théorème caractérisant l'existence d'une solution
+régulière à l'équation de la chaleur rétrograde.
+
+\begin{theoreme}\label{thm:controllability-result-5}%
+    Soit $v\in\Ldeux{Q}$. L'équation de la chaleur rétrograde
+    \begin{equation}\label{eq:initial-problem-2}
+        \begin{cases}\displaystyle
+            \begin{array}{rl}
+                \primetemps{z} - \Delta z = v & \text{dans}\ Q,\\
+                \\
+                z = 0 & \text{sur}\ \Sigma,\\
+                \\
+                z(\cdot,T) = 0 & \text{dans}\ \Omega
+            \end{array}
+        \end{cases}
+    \end{equation}
+    admet une unique solution régulière
+    \begin{equation}
+        z\in \Ldeux{0,T;H_{0}^{1}(\Omega)}\cap
+        \Cscr\!\left({0,T;\Ldeux{Q}}\right)
+    \end{equation}
+    si et seulement si la suite $\displaystyle
+    {\left({{y_{0}}_{\veps}}\right)}_{\veps}$ est bornée dans
+    $\Ldeux{\Omega}$.
+\end{theoreme}
+
+\begin{proof}%
+\end{proof}

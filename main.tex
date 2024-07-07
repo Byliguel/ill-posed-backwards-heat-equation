@@ -1,0 +1,74 @@
+%   Environment     :   Ubuntu 24.04 LTS ~ "Noble Numbat"
+%                       Gnome 46
+%                       TeXLive 2023
+%
+%   Platform        :   x86_64-pc-linux-gnu (64bits)
+%
+%   Author          :   Bylli Andre Guel ~ byliguel@gmail.com
+%
+%   File            :   main.tex
+%
+%   Description     :   Main TeX source for research paper on the
+%   retrograde heat equation
+%       ~/Documents/research/postDoc-projects/retrograde-heat-equation/
+%
+%   Created date    :   2024-06-11 ~ 17:01
+%   Version         :   v24.06.0
+%   Last revision   :   ...
+%=========================================================================
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{amsmath,amssymb,amsfonts,mathrsfs,amsthm,shortcommands}
+\usepackage{textcomp,pifont,authblk}
+
+\usepackage{biblatex}
+\addbibresource{biblio.bib}
+\usepackage{csquotes}
+
+\newtheorem{definition}{Définition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollaire}{Corollaire}
+\newtheorem{lemme}{Lemme}
+\newtheorem{remarque}{Remarque}
+\newtheorem{theoreme}{Théorème}
+
+% \newcommand{\ie}{\textit{i.e.}}
+
+\author{Bylli Andre Guel}
+
+% \author[,1,2]{Bylli André
+% B.~\textsc{Guel}\thanks{bylli.guel@uv.bf\,/\,01~BV~30770~Ouagadougou,~Burkina~Faso}}
+
+% \affil[1]{Virtual University of Burkina Faso,\authorcr{} Ouagadougou,
+% Burkina~Faso}
+% \affil[2]{Laboratory LANIBIO,
+% Joseph~Ki-Zerbo~University,\authorcr{}Ouagadougou, Burkina~Faso}
+
+\title{Contrôle de l'équation de la chaleur rétrograde: la méthode de
+contrôlabilité}
+
+\begin{document}
+
+\parindent=0pt{}
+\parskip=6pt{}
+
+\maketitle{}
+
+\input{./01-statement.tex}
+\input{./02-controllability.tex}
+
+\section{Le problème de contrôle}
+
+\section{Conclusion}
+
+\nocite{*}
+\printbibliography{}
+
+\end{document}

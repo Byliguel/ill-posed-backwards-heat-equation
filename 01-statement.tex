@@ -1,0 +1,78 @@
+\section{Position du problème}
+
+On considère $\Omega$ un ouvert borné de ${\Rbb}^{n}$ de frontière
+${\Gamma}$ deux fois continûment différentiable, $\Omega$ étant localement
+d'un seul côté de $\Gamma$, soit que $\bar{\Omega}$ est un ouvert est une
+variété à bord de classe ${\Cscr}^{2}$.
+
+Pour $T > 0$, on note $\displaystyle Q = \Omega\times]0,T[$, $\displaystyle
+\Sigma = \Gamma\times ]0,T[$, et $\displaystyle {\Uscr}_{ad}$ un
+sous-ensemble convexe fermé non vide de $\Ldeux{Q}$.
+
+L'étude de l'évolution de la chaleur dans le domaine $\Omega$ à un instant
+$t\in ]0,T[$, connaissant la valeur de la température à l'instant final est
+connu pour être le prototype des problèmes mal posés. Elle consiste à
+trouver l'état $z\in \Ldeux{Q}$ tel que
+\begin{equation}\label{eq:initial-problem}
+    \begin{cases}\displaystyle
+        \begin{array}{rl}
+            \primetemps{z} - \Delta z = v & \text{dans}\ Q,\\
+            \\
+            z = 0 & \text{sur}\ \Sigma,\\
+            \\
+            \condfinale{z} = 0 & \text{dans}\ \Omega,
+        \end{array}
+    \end{cases}
+\end{equation}
+où $v$, donné dans $\Ldeux{Q}$, est la variable de contrôle.
+
+On dit qu'un couple contrôle-état $(v,z)\in\Ldeux{Q}\times \Ldeux{Q}$
+est admissible s'il vérifie~\eqref{eq:initial-problem} avec $v\in
+{\Uscr}_{ad}$.
+
+Supposant que l'ensemble des couples contrôle-état admissible, noté
+${\chi}_{ad}$, est non vide, on introduit la fonctionnelle coût
+\begin{equation}\label{eq:initial-cost-function}
+    J(v,z) = \dfrac{1}{2}\normecq{z - z_{d}} + \dfrac{N}{2}\normecq{v},
+\end{equation}
+avec $z_{d}\in\Ldeux{Q}$ et $N > 0$.
+
+On s'intéresse alors au problème de contrôle consistant à trouver un couple
+contrôle-état $\displaystyle (u,y)\in {\chi}_{ad}$ solution de
+\begin{equation}\label{eq:initial-control-problem}
+    J(u,y) = \inf_{(v,z)\in {\chi}_{ad}}\,J(v,z).
+\end{equation}
+
+On a immédiatement le résultat suivant.
+\begin{theoreme}%
+    Le problème de contrôle optimal~\eqref{eq:initial-control-problem}
+    admet une solution unique $(u,y)$ appelée couple optimal.
+\end{theoreme}
+
+\begin{proof}%
+    L'ensemble des couples admissibles étant non vide et $J$ étant une
+    fonction semi-continue inférieurement, strictement convexe et coercive,
+    il existe un unique couple admissible $(u,y)$ solution
+    de~\eqref{eq:initial-control-problem}.
+\end{proof}
+
+\begin{remarque}%
+    En utilisant la condition d'optimalité d'Euler-Lagrange:
+    \begin{equation*}
+        \forall\,(v,z)\in{\chi}_{ad},\quad {\left.{%
+            \dfrac{\diff}{\diff{\lambda}}J\!\left({%
+                u + \lambda(v - u), y + \lambda (z - y)
+            }\right)
+        }\right|}_{\lambda = 0} \geq 0,
+    \end{equation*}
+    le couple optimal $(u,y)$ est caractérisé par
+    \begin{equation*}
+        \forall\,(v,z)\in {\chi}_{ad},\quad \scalaireq{y - z_{d}}{z - y} +
+        N\scalaireq{u}{v - u} \geq 0.
+    \end{equation*}
+\end{remarque}
+
+L'objectif est alors ici de trouver un système d'optimalité découplé
+caractérisant $(u,y)$. Une méthode classique en la matière est la méthode
+pénalisation de J.-L.~Lions, consistant à approcher $(u,y)$ par un problème
+pénalisé.
