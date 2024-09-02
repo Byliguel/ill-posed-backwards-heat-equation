@@ -461,23 +461,19 @@
 }
 
 \newcommand{\condinitiale}[1]{%
-    {\left.{#1}\right|}_{t = 0}
+    {#1}\!\left({\cdot, 0}\right)
 }
 
 \newcommand{\condinitialedeux}[1]{%
-    {\left.{%
-        \dfrac{\partial{}#1}{\partial{}t}
-    }\right|}_{t = 0}
+    \dfrac{\partial{}#1}{\partial{}t}\!\left({\cdot, 0}\right)
 }
 
 \newcommand{\condfinaledeux}[1]{%
-    {\left.{%
-        \dfrac{\partial{}#1}{\partial{}t}
-    }\right|}_{t = T}
+    \dfrac{\partial{}#1}{\partial{}t}\!\left({\cdot, T}\right)
 }
 
 \newcommand{\condfinale}[1]{%
-    {\left.{#1}\right|}_{t = T}
+    {#1}\!\left({\cdot,T}\right)
 }
 
 \newcommand{\tracetempsinitial}[1]{%
@@ -565,8 +561,8 @@
     {{#1}_{2}^{*}}_{\veps}
 }
 
-\newcommand{\fiuneps}{%
-    {{\phi}_{1}}_{\veps}
+\newcommand{\fieps}{%
+    {\phi}_{\veps}
 }
 
 \newcommand{\fideuxeps}{%

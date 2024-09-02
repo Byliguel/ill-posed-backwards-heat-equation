@@ -15,19 +15,20 @@
 #=========================================================================
 
 FILE = main
-OUT = retrograde-heat-equation
+OUT = controllability-for-the-ill-posed-backwards-heat-equation
 
-default: last
+default: pending
 #=========================================================================
 
 pending:
 	latexmk -pdf $(FILE)
 
 last:
-	latexmk $(FILE)
-	dvips -E $(FILE).dvi -o $(FILE).eps
-	epstopdf $(FILE).eps --debug --outfile=$(OUT).pdf
-	rm -f $(FILE).pdf
+	# latexmk -f -ps $(FILE)
+	# dvips $(FILE).dvi -o $(FILE).eps
+	# epstopdf $(FILE).ps --debug --outfile=$(OUT).pdf
+	cp $(FILE).pdf $(OUT).pdf
 	rm -f *.aux *.bbl *.blg *.toc *.log *.lot *.lof *.out *.dvi *.ps \
 		*.maf *mtc* *mlf* *mlt* *.idx *.pdfsync *tmp* *.ain *.ilg *.ind \
 		*.fdb_latexmk *.fls *.bcf *.eps *.run.xml
+	# rm -f $(FILE).pdf

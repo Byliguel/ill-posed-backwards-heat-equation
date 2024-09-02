@@ -26,11 +26,13 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 \usepackage{amsmath,amssymb,amsfonts,mathrsfs,amsthm,shortcommands}
-\usepackage{textcomp,pifont,authblk}
+\usepackage{textcomp,pifont,authblk,enumitem}
 
 \usepackage{biblatex}
 \addbibresource{biblio.bib}
 \usepackage{csquotes}
+
+% \usepackage[notref,notcite]{showkeys}
 
 \newtheorem{definition}{Définition}
 \newtheorem{proposition}{Proposition}
@@ -39,20 +41,40 @@
 \newtheorem{remarque}{Remarque}
 \newtheorem{theoreme}{Théorème}
 
+\setlist[itemize,1]{label=\tiny\Pisymbol{pzd}{110}}
+\setlist[itemize,2]{label=\tiny$\blacktriangleright$}
+\setlist[itemize,3]{label=\tiny\textbullet}
+
 % \newcommand{\ie}{\textit{i.e.}}
 
-\author{Bylli Andre Guel}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{%
+    citecolor=black,%
+    filecolor=black,%
+    colorlinks=true,%
+    linkcolor=black,%
+    urlcolor=black,%
+    pdftitle={Control of Singular Distributed Systems by Controllability:
+    The Ill-Posed Backwards Heat Equation}
+}
 
-% \author[,1,2]{Bylli André
-% B.~\textsc{Guel}\thanks{bylli.guel@uv.bf\,/\,01~BV~30770~Ouagadougou,~Burkina~Faso}}
+\title{Control of Singular Distributed Systems by Controllability: The
+Ill-Posed Backwards Heat Equation}
 
-% \affil[1]{Virtual University of Burkina Faso,\authorcr{} Ouagadougou,
-% Burkina~Faso}
-% \affil[2]{Laboratory LANIBIO,
-% Joseph~Ki-Zerbo~University,\authorcr{}Ouagadougou, Burkina~Faso}
+% \author{Bylli André Guel}
 
-\title{Contrôle de l'équation de la chaleur rétrograde: la méthode de
-contrôlabilité}
+\author[,1,2]{Bylli
+André~\textsc{Guel}\thanks{bylli.guel@uv.bf\,/\,01~BV~30770~Ouagadougou~01,~Burkina~Faso}}
+\affil[1]{Virtual University of Burkina Faso,\authorcr{} Ouagadougou,
+Burkina~Faso}
+\affil[2]{Laboratoire d'Analyse Numérique, d'Informatique et de
+BIOmathématiques (LANIBIO), Burkina Faso}
+
+\author[3,4]{Diaraf~\textsc{Seck}}
+\affil[3]{Université Cheikh Anta Diop, FASEG, BP~16889, Dakar, Fann,
+Sénégal}
+\affil[4]{Laboratoire de Mathématiques de la Décision et d'Analyse
+Numérique (LMDAN), Sénégal}
 
 \begin{document}
 
@@ -61,12 +83,55 @@ contrôlabilité}
 
 \maketitle{}
 
+\begin{abstract}
+    This paper deals with the ill-posed backwards heat equation.
+
+    Dans cet article, nous traitons du problème de contrôle de l'équation
+    de la chaleur rétrograde. Nous proposons, pour ce faire, la méthode
+    dite de contrôlabilité. Le point de vue adopté, consistant à
+    interpréter le problème initial comme un problème inverse, nous permet
+    d'obtenir un système d'optimalité singulier découplé fort pour le couple
+    contrôle-état optimal, mais aussi de proposer un critère d'existence
+    d'une solution régulière à l'équation de la chaleur rétrograde. Il
+    importe de noter que ces résultats sont obtenus sans recours à une
+    hypothèse de type Slater, hypothèse dont on avait du mal à se défaire
+    jusqu'alors.
+
+    \vspace{\baselineskip}
+    \textbf{Keywords:} Singular distributed systems, Optimal control,
+    Ill-posed backwards heat equation, Controllability, Inverse Problem.
+\end{abstract}
+
 \input{./01-statement.tex}
 \input{./02-controllability.tex}
-
-\section{Le problème de contrôle}
+\input{./03-the-control-problem.tex}
 
 \section{Conclusion}
+
+In this work, we succeed in characterizing the optimal control-state pair
+of the control problem for the ill-posed backwards heat equation, using the
+controllability concept. The method consists in interpreting the initial
+problem as an inverse problem, we are also saying a controllability
+problem. An approach that allows us to obtain a strong and decoupled
+singular optimality system. As expected, the approach here proposed does
+well without using an additional assumption of the class of the regularity
+assumption~\eqref{eq:dorvilleassumption} used in~\cite{dorville} and the
+Slater-type one~\eqref{eq:slater-type-assumption}. All that is required is
+the following
+\begin{equation}
+    (u,y):\quad \condinitiale{y}\in\Ldeux{\Omega}.
+\end{equation}
+% assumption that the optimal state $y$ of the system verified
+% $\condinitiale{y}\in\Ldeux{\Omega}$.
+
+% Beyond, the method here adopted makes
+% it possible to propose a characterization of the existence of a regular
+% solution to the ill-posed backwards heat equation.
+Finally, in view of the similar results obtained for the ill-posed Cauchy
+system for an elliptic operator (cf.~\cite{ownElliptic} and~\cite{ownAAA}),
+the controllability method here proposed seems relevant for control
+problems (of singular distributed systems) which require recourse to
+Slater-type assumptions such as~\eqref{eq:slater-type-assumption}.
 
 \nocite{*}
 \printbibliography{}
