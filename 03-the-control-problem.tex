@@ -1,16 +1,16 @@
-\section{La méthode de contrôlabilité}\label{sec:controlproblem}
+\section{The optimal control problem}\label{sec:controlproblem}
 
-Commençons par rappeler que nous sommes ici intéressés par le contrôle de
-l'équation de la chaleur rétrograde. Soit, plus précisément, que pour
-$v,z\in \Ldeux{Q}$ vérifiant
+Let us start by recalling that we are here interested in the control
+problem of the ill-posed backwards heat equation. That is to say, more
+precisely, that for $v,z\in \Ldeux{Q}$ satisfying
 \begin{equation}\label{eq:control80}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
-            \primetemps{z} - \Delta z & = & v & \text{dans} & Q,\\
+            \primetemps{z} - \Delta z & = & v & \text{in} & Q,\\
             \\
-            z & = & 0 & \text{sur} & \Sigma,\\
+            z & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condfinale{z} & = & 0 & \text{sur} & \Omega,
+            \condfinale{z} & = & 0 & \text{on} & \Omega,
         \end{array}
     \end{cases}
 \end{equation}
@@ -25,141 +25,125 @@ s'intéressant au problème de contrôle
     }\right\}.
 \end{equation}
 
-Comme souligné à l'introduction, le
-problème~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} admet
-une solution unique $(u,y)$ dont la caractérisation, via un système
-d'optimalité singulier découplé fort, et cela sans recours à l'hypothèse de
-Slater~\eqref{eq:slater-type-assumption}, est le principal objet ici.
+As underlined in the introduction, the optimal control
+problem~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} admits
+a unique solution $(u,y)$ whose characterization, via a strong and
+decoupled singular optimality system, and this without using the
+Slater-type assumption~\eqref{eq:slater-type-assumption}, is the main
+objective.
 
-% \subsection{La méthode de contrôlabilité}
-
-Pour ce faire, partant de l'hypothèse de non-vacuité de l'ensemble des
-couples contrôle-état admissibles
-pour~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} et des
-résultats de la section précédente, on a pour tous $v\in\Ldeux{Q}$ et
-$\veps > 0$ qu'il existe
+To do so, starting from the non-vacuity assumption of the set of admissible
+control-state pairs, and using the results previously obtained, we have for
+any $v\in\Ldeux{Q}$ and $\veps > 0$ that there exists
 \begin{equation*}
-    {y_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{et}\qquad y_{\veps}^{v}\in
+    {y_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{and}\qquad y_{\veps}^{v}\in
     \Vbb
 \end{equation*}
-% comme souligné à la Remarque~\eqref{rq:naturalassumption}, de
-% l'hypothèse
-% \begin{equation*}
-%     \left\{{%
-%         (v,z)\in \Ascr: \condinitiale{z} \in\Ldeux{\Omega}
-%     }\right\}\neq \emptyset,
-% \end{equation*}
-% on a pour tous $v\in\Ldeux{Q}$ et $\veps > 0$ qu'il existe
-% \begin{equation*}
-%     {y_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{et}\qquad y_{\veps}^{v}\in
-%     \Vbb
-% \end{equation*}
-tels que
+such that
 \begin{equation*}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
             \primetemps{y_{\veps}^{v}} - \Delta y_{\veps}^{v} & = & v &
-            \text{dans} & Q,\\
+            \text{in} & Q,\\
             \\
-            y_{\veps}^{v} & = & 0 & \text{sur} & \Sigma,\\
+            y_{\veps}^{v} & = & 0 & \text{on} & \Sigma,\\
             \\
             \condinitiale{y_{\veps}^{v}} & = & {y_{0}}_{\veps} &
-            \text{dans} & \Omega,
+            \text{in} & \Omega,
         \end{array}
     \end{cases}
 \end{equation*}
-avec l'estimation
+with the estimate
 \begin{equation*}
     \normeohm{%
         \condfinale{y_{\veps}^{v}}
     } < \veps.
 \end{equation*}
-Supposant alors que la solution optimale $(u,y)$
-de~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} est telle
-que $\displaystyle \condinitiale{y}\in\Ldeux{\Omega}$, on introduit la
-fonctionnelle
+Assuming that the optimal solution $(u,y)$
+for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} is such
+that $\displaystyle \condinitiale{y}\in\Ldeux{\Omega}$, we introduce the
+functional
 \begin{equation*}
     J_{\veps}(v) = \dfrac{1}{2}\normecq{y_{\veps}^{v} - z_{d}} +
     \dfrac{N}{2}\normecq{v} + \dfrac{1}{2\veps}\normecohm{{y_{0}}_{\veps} -
     \condinitiale{y}},
 \end{equation*}
-et on s'intéresse au problème
+begin interested in the control problem
 \begin{equation}\label{eq:control87}
     \inf\!\left\{{%
         J_{\veps}(v);\ v\in\uad
     }\right\}.
 \end{equation}
-Le résultat suivant est immédiat.
+The following result is then immediate.
 
 \begin{proposition}%
-    Pour tout $\veps > 0$, le problème de contrôle~\eqref{eq:control87}
-    admet une solution unique: le contrôle optimal approché $\bareps{u}$.
+    For any $\veps > 0$, the control problem~\eqref{eq:control87} admits a
+    unique solution: the approached optimal control-state pair $\bareps{u}$.
 \end{proposition}
 
-\subsection{Convergence de la méthode}\label{sec:convergence}
+\subsection{Convergence of the method}\label{sec:convergence}
 
-Soit $\veps > 0$. On a existence et unicité du contrôle approché
-$\bareps{u}$. Soit, avec les résultats de la section précédente, qu'il
-existe
+Let $\veps > 0$. For the approached optimal control, the results previously
+obtained lead to the existence of
 \begin{equation*}
-    {\bar{y}_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{et}\qquad
+    {\bar{y}_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{and}\qquad
     \bareps{y}\in\Vbb
 \end{equation*}
-vérifiant
+satisfying
 \begin{equation}\label{eq:control89}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
             \primetemps{\bareps{y}} - \Delta\bareps{y} & = & \bareps{u} &
-            \text{dans} & Q,\\
+            \text{in} & Q,\\
             \\
-            \bareps{y} & = & 0 & \text{sur} & \Sigma,\\
+            \bareps{y} & = & 0 & \text{on} & \Sigma,\\
             \\
             \condinitiale{\bareps{y}} & = & {\bar{y}_{0}}_{\veps} &
-            \text{dans} & \Omega,
+            \text{in} & \Omega,
         \end{array}
     \end{cases}
 \end{equation}
-et l'estimation
+and the estimate
 \begin{equation*}
     \normeohm{\condfinale{\bareps{y}} } < \veps,
 \end{equation*}
-avec
+with
 \begin{equation*}
     J_{\veps}\!\left({\bareps{u}}\right)\leq J_{\veps}(v),\quad
     \forall\,v\in\uad.
 \end{equation*}
-En particulier donc
+In particular
 \begin{equation}\label{eq:control92}
     J_{\veps}\!\left({\bareps{u}}\right) \leq J_{\veps}(u),
 \end{equation}
-où $u$ est le contrôle optimal
-pour~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
+where $u$ is the optimal control-state pair
+of~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
 
-On a en fait que $J_{\veps}(u)$ est indépendant de $\veps$. En effet, comme
-l'état optimal $y$ associé à $u$ vérifie
-$\condinitiale{y}\in\Ldeux{\Omega}$, on obtient en posant
-${y_{0}^{*}}_{\veps} = \condinitiale{y}$ que $y$ satisfait
+We have in fact that $J_{\veps}(u)$ is independant of $\veps$. Indeed,
+since the optimal state $y$ associated with the optimal control $u$
+satisfies $\condinitiale{y}\in\Ldeux{\Omega}$, we obtain by posing
+${y_{0}^{*}}_{\veps} = \condinitiale{y}$ that $y$ satisfies
 \begin{equation*}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
-            \primetemps{y} - \Delta y & = & u & \text{dans} & Q,\\
+            \primetemps{y} - \Delta y & = & u & \text{in} & Q,\\
             \\
-            y & = & 0 & \text{sur} & \Sigma,\\
+            y & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condinitiale{y} & = & {y_{0}^{*}}_{\veps} & \text{dans} &
+            \condinitiale{y} & = & {y_{0}^{*}}_{\veps} & \text{in} &
             \Omega
         \end{array}
     \end{cases}
 \end{equation*}
-avec
+with
 \begin{equation*}
     \begin{array}{rclll}
-        \condfinale{y} & = & 0 & \text{dans} & \Omega,
+        \condfinale{y} & = & 0 & \text{in} & \Omega,
     \end{array}
     \qquad\text{\textit{a fortiori}}\qquad \normeohm{\condfinale{y}} <
     \veps.
 \end{equation*}
-Il suit que $J_{\veps}(u)$ est défini, avec
+It follows that $J_{\veps}(u)$ is defined, with
 \begin{equation*}
     \begin{split}
         J_{\veps}(u) &= \dfrac{1}{2}\normecq{y - z_{d}} +
@@ -170,50 +154,49 @@ Il suit que $J_{\veps}(u)$ est défini, avec
         J(u,y).
     \end{split}
 \end{equation*}
-Ainsi~\eqref{eq:control92} devient
+Hence~\eqref{eq:control92} becomes
 \begin{equation}\label{eq:control95}
     J_{\veps}\!\left({\bareps{u}}\right) \leq J_{\veps}(u) = J(u,y),
 \end{equation}
-et il vient qu'il existe des constantes $C_{i}\in{\Rbb}^{*}$ indépendantes
-de $\veps$ telles qu'on a
+and it follows that there exists constants $C_{i}\in{\Rbb}^{*}$ independant
+of $\veps$ such as
 \begin{equation*}
     \normeq{\bareps{y}} \leq C_{1},\qquad
-    \normeq{\bareps{u}}\leq C_{2}\qquad\text{et}\qquad
+    \normeq{\bareps{u}}\leq C_{2}\qquad\text{and}\qquad
     \normeohm{{\bar{y}_{0}}_{\veps}}\leq C_{3}.
 \end{equation*}
-On en déduit immédiatement qu'il existe $\hat{u}\in\Ldeux{Q}$,
-$\hat{y}\in\Ldeux{Q}$ et ${\hat{y}}_{0}\in\Ldeux{\Omega}$ tels que
+Then, we immediately deduce that there exists $\hat{u}\in\Ldeux{Q}$,
+$\hat{y}\in\Ldeux{Q}$ and ${\hat{y}}_{0}\in\Ldeux{\Omega}$ such as
 \begin{equation*}
     \begin{cases}\displaystyle
-        \begin{array}{rcllll}
-            \bareps{u} & \longrightarrow & \hat{u} & \text{dans} &
-            \Ldeux{Q} & \text{faible},\\
-            \bareps{y} & \longrightarrow & \hat{y} & \text{dans} &
-            \Ldeux{Q} & \text{faible},\\
+        \begin{array}{rclll}
+            \bareps{u} & \longrightarrow & \hat{u} & \text{weakly in} &
+            \Ldeux{Q},\\
+            \bareps{y} & \longrightarrow & \hat{y} & \text{weakly in} &
+            \Ldeux{Q},\\
             {\bar{y}_{0}}_{\veps} & \longrightarrow & {\hat{y}}_{0} &
-            \text{dans} & \Ldeux{\Omega} & \text{faible}.
+            \text{weakly in} & \Ldeux{\Omega}.
         \end{array}
     \end{cases}
 \end{equation*}
-Mais encore,~\eqref{eq:control95} entraîne aussi
+But much more,~\eqref{eq:control95} also implies
 \begin{equation}\label{eq:control106}
     \normeohm{{\bar{y}_{0}}_{\veps} - \condinitiale{y}} \leq 2\veps\,C_{4},
 \end{equation}
-ce qui conduit, comme
+which leads, since
 \begin{equation}\label{eq:control106p}
-    \begin{array}{rcllll}
+    \begin{array}{rclll}
         {\bar{y}_{0}}_{\veps} & \longrightarrow & {\hat{y}}_{0} &
-        \text{dans} & \Ldeux{\Omega} & \text{faible},
+        \text{weakly in} & \Ldeux{\Omega},
     \end{array}
 \end{equation}
-à
+to
 \begin{equation}\label{eq:control107}
     \begin{array}{rclll}
-        {\hat{y}}_{0} & = & \condinitiale{y} & \text{dans} & \Omega.
+        {\hat{y}}_{0} & = & \condinitiale{y} & \text{strongly in} & \Omega.
     \end{array}
 \end{equation}
-Alors, il vient avec~\eqref{eq:control89}, que pour tout
-$\vphi\in\Dscr(Q)$,
+Then it comes, with~\eqref{eq:control89}, that for any $\vphi\in\Dscr(Q)$,
 \begin{equation*}
     \begin{split}
         \scalaireq{\primetemps{\bareps{y}}}{\vphi} &- \scalaireq{%
@@ -221,32 +204,32 @@ $\vphi\in\Dscr(Q)$,
         }{%
             \vphi%
         } = \scalaireq{\bareps{u}}{\vphi}\\
-        &\iff \scalaireohm{%
-            \condfinale{\bareps{y}}
-        }{%
-            \condfinale{\vphi}
-        } - \scalaireohm{%
-            \condinitiale{\bareps{y}}
-        }{%
-            \condinitiale{\vphi}
-        } - \scalaireq{%
-            \bareps{y}
-        }{%
-            \primetemps{\vphi}
-        }\\
-        &\qquad - \scalaireq{%
-            \bareps{y}
-        }{%
-            \Delta\vphi%
-        } - \scalaires{%
-            \deriveenormale{\bareps{y}}
-        }{%
-            \vphi%
-        } + \scalaires{%
-            \bareps{y}
-        }{%
-            \deriveenormale{\vphi}
-        } = \scalaireq{\bareps{u}}{\vphi}\\
+        % &\iff \scalaireohm{%
+        %     \condfinale{\bareps{y}}
+        % }{%
+        %     \condfinale{\vphi}
+        % } - \scalaireohm{%
+        %     \condinitiale{\bareps{y}}
+        % }{%
+        %     \condinitiale{\vphi}
+        % } - \scalaireq{%
+        %     \bareps{y}
+        % }{%
+        %     \primetemps{\vphi}
+        % }\\
+        % &\qquad - \scalaireq{%
+        %     \bareps{y}
+        % }{%
+        %     \Delta\vphi%
+        % } - \scalaires{%
+        %     \deriveenormale{\bareps{y}}
+        % }{%
+        %     \vphi%
+        % } + \scalaires{%
+        %     \bareps{y}
+        % }{%
+        %     \deriveenormale{\vphi}
+        % } = \scalaireq{\bareps{u}}{\vphi}\\
         &\iff \scalaireohm{%
             \condfinale{\bareps{y}}
         }{%
@@ -271,7 +254,7 @@ $\vphi\in\Dscr(Q)$,
         } = \scalaireq{\bareps{u}}{\vphi},
     \end{split}
 \end{equation*}
-soit à la limite
+which gives, passing to the limit,
 \begin{equation*}
     \begin{split}
         \scalaireohm{%
@@ -317,128 +300,125 @@ soit à la limite
     \begin{cases}\displaystyle
         \begin{array}{rclll}
             \primetemps{\hat{y}} - \Delta\hat{y} & = & \hat{u} &
-            \text{dans} & Q,\\
+            \text{in} & Q,\\
             \\
-            \hat{y} & = & 0 & \text{sur} & \Sigma,\\
+            \hat{y} & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condinitiale{\hat{y}} & = & {\hat{y}}_{0} & \text{dans} &
+            \condinitiale{\hat{y}} & = & {\hat{y}}_{0} & \text{in} &
             \Omega.
         \end{array}
     \end{cases}
 \end{equation}
-Par ailleurs, la norme $\normeohm{\cdot}$ étant continue, \textit{a
-fortiori} faiblement continue,
+Moreover, the norm $\normeohm{\cdot}$ being continuous, \textit{a fortiori}
+weakly continuous,
 \begin{equation*}
-    \begin{array}{rcllll}
-        \bareps{y} & \longrightarrow & \hat{y} & \text{dans} &
-        \Ldeux{Q} &  \text{faible}
-    \end{array}\qquad\text{et}\qquad
+    \begin{array}{rclll}
+        \bareps{y} & \longrightarrow & \hat{y} & \text{weakly in} &
+        \Ldeux{Q}
+    \end{array}\qquad\text{and}\qquad
     \normeohm{\condfinale{\bareps{y}}} < \veps
 \end{equation*}
-amènent
+bring
 \begin{equation}\label{eq:control103}
     \begin{array}{rclll}
-        \condfinale{\hat{y}} & = & 0 & \text{dans} & \Omega.
+        \condfinale{\hat{y}} & = & 0 & \text{in} & \Omega.
     \end{array}
 \end{equation}
-Ainsi~\eqref{eq:control102}~et~\eqref{eq:control103} permettent de conclure
-que $\hat{y}\in\Ldeux{Q}$ satisfait
+Thus~\eqref{eq:control102}~and~\eqref{eq:control103} allow to conclude that
+$\hat{y}\in\Ldeux{Q}$ satisfies
 \begin{equation*}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
             \primetemps{\hat{y}} - \Delta\hat{y} & = & \hat{u} &
-            \text{dans} & Q,\\
+            \text{in} & Q,\\
             \\
-            \hat{y} & = & 0 & \text{sur} & \Sigma,\\
+            \hat{y} & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condfinale{\hat{y}} & = & 0 & \text{dans} & \Omega,
+            \condfinale{\hat{y}} & = & 0 & \text{in} & \Omega,
         \end{array}
     \end{cases}
 \end{equation*}
-notant que $\hat{u}\in\uad$, puisque $\bareps{u}\in\uad$ et $\uad$ est
-fermé donc fermé faible: le couple $\left({\hat{u},\hat{y}}\right)$ est
-admissible
-pour~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}, et donc
+noting that $\hat{u}\in\uad$, since $\bareps{u}\in\uad$ and $\uad$ is
+closed and therefore weakly closed: the control-state pair
+$\left({\hat{u},\hat{y}}\right)$ is admissible
+for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}, so that
 \begin{equation}\label{eq:control105}
     J(u,y)\leq J\!\left({\hat{u},\hat{y}}\right).
 \end{equation}
-D'autre part, passant~\eqref{eq:control95} à la limite lorsque $\veps\to
-0$, il vient $J\!\left({\hat{u},\hat{y}}\right)\leq J(u,y)$; soit,
-avec~\eqref{eq:control105}, que $J(u,y) =
+On the other hand, passing~\eqref{eq:control95} to the limit when $\veps\to
+0$, it comes $J\!\left({\hat{u},\hat{y}}\right)\leq J(u,y)$; that is to
+say, with~\eqref{eq:control105}, that $J(u,y) =
 J\!\left({\hat{u},\hat{y}}\right)$.
 
-On conclut bien alors, par unicité du couple contrôle-état optimal $(u,y)$,
-que $\left({\hat{u},\hat{y}}\right) = (u,y)$, ce qui finit de prouver le
-résultat suivant.
+Then we conclude, by uniqueness of the optimal control-state pair $(u,y)$,
+that $\left({\hat{u},\hat{y}}\right) = (u,y)$, which ends up proving the
+following result.
 
 \begin{proposition}%
-    Pour tout $\veps > 0$, le contrôle optimal approché $\bareps{u}$ et
-    l'état $\bareps{y}$ associé vérifient
+    For any $\veps > 0$, the approach optimal control $\bareps{u}$ and the
+    associated state $\bareps{y}$ satisfy
     \begin{equation*}
         \begin{cases}\displaystyle
-            \begin{array}{rcllll}
-                \bareps{u} & \longrightarrow & u & \text{dans} & \Ldeux{Q}
-                & \text{faible},\\
+            \begin{array}{rclll}
+                \bareps{u} & \longrightarrow & u & \text{weakly in} &
+                \Ldeux{Q},\\
                 % \\
-                \bareps{y} & \longrightarrow & y & \text{dans} & \Ldeux{Q}
-                & \text{faible},
+                \bareps{y} & \longrightarrow & y & \text{weakly in} &
+                \Ldeux{Q},
             \end{array}
         \end{cases}
     \end{equation*}
-    où $(u,y)$ est le couple contrôle-état optimal
-    pour~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
+    where $(u,y)$ is the optimal control-state pair
+    for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
 \end{proposition}
 
-On établit ci-après, qu'on a en fait plus: la convergence forte.
+We establish below that we actually have more: the strong convergence.
 
 \begin{theoreme}%
-    Pour tout $\veps > 0$, le contrôle optimal approché $\bareps{u}$ et
-    l'état $\bareps{y}$ associé sont tels que, lorsque $\veps \to 0$,
+    For any $\veps > 0$, the approach optimal control $\bareps{u}$ and the
+    associated state $\bareps{y}$ are such that, when $\veps \to 0$,
     \begin{equation*}
         \begin{cases}\displaystyle
-            \begin{array}{rcllll}
-                \bareps{u} & \longrightarrow & u & \text{dans} &
-                \Ldeux{Q} & \text{fort},\\
+            \begin{array}{rclll}
+                \bareps{u} & \longrightarrow & u & \text{strongly in} &
+                \Ldeux{Q},\\
                 % \\
-                \bareps{y} & \longrightarrow & y & \text{dans} & \Ldeux{Q}
-                & \text{fort},
+                \bareps{y} & \longrightarrow & y & \text{strongly in} &
+                \Ldeux{Q},
             \end{array}
         \end{cases}
     \end{equation*}
-    où $(u,y)$ est le couple contrôle-état optimal
-    pour~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
+    where $(u,y)$ is the optimal control-state pair
+    for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
 \end{theoreme}
 
 \begin{proof}%
-    Des résultats précédents, on a
+    From the results previously obtained above, we have that
     \begin{equation}\label{eq:control112}
-        \begin{array}{rcllll}
-            \bareps{u} & \longrightarrow & u & \text{dans} & \Ldeux{Q} &
-            \text{faible},
+        \begin{array}{rclll}
+            \bareps{u} & \longrightarrow & u & \text{weakly in} & \Ldeux{Q},
         \end{array}
     \end{equation}
 
     \begin{equation}\label{eq:control113}
         \begin{array}{rcllll}
-            \bareps{y} & \longrightarrow & y & \text{dans} & \Ldeux{Q} &
-            \text{faible},
+            \bareps{y} & \longrightarrow & y & \text{weakly in} & \Ldeux{Q},
         \end{array}
     \end{equation}
-    et
+    and
     \begin{equation*}
         J(u,y) = \lim_{\veps\to 0}J_{\veps}\!\left({\bareps{u}}\right).
     \end{equation*}
-    Où,
-    d'après~\eqref{eq:control106}\eqref{eq:control106p}
-    et~\eqref{eq:control107}, cette dernière égalité s'écrit encore
+    Where, from~\eqref{eq:control106}\eqref{eq:control106p}
+    and~\eqref{eq:control107}, the last equality above can still be written
     \begin{equation}\label{eq:control115}
         \normecq{y - z_{d}} + N\normecq{u} = \lim_{\veps\to 0}\left({%
             \normecq{\bareps{y} - z_{d}} + N\normecq{\bareps{u}}
         }\right).
     \end{equation}
-    Mais alors, la norme $\normeq{\cdot}$ étant continue, \textit{a
-    fortiori} semi-continue inférieurement faible, il vient
-    avec~\eqref{eq:control112} et~\eqref{eq:control113} que
+    But then, the norm $\normeq{\cdot}$ being continous, \textit{a
+    fortiori} weakly lower semi-continous, it comes,
+    with~\eqref{eq:control112} and~\eqref{eq:control113}, that
     \begin{equation*}
         \begin{cases}\displaystyle
             \begin{array}{rcll}
@@ -450,15 +430,15 @@ On établit ci-après, qu'on a en fait plus: la convergence forte.
             \end{array}
         \end{cases}
     \end{equation*}
-    D'où il suit, avec~\eqref{eq:control115}, que
+    From where it follows, with~\eqref{eq:control115}, that
     \begin{equation}\label{eq:control118}
         \normecq{y -z_{d}} = \lim_{\veps\to 0}\normecq{\bareps{y} - z_{d}},
     \end{equation}
-    et
+    and
     \begin{equation}\label{eq:control119}
         \normecq{u} = \lim_{\veps\to 0}\normecq{\bareps{u}}.
     \end{equation}
-    Ainsi, comme
+    Hence, since
     \begin{equation*}
         \normecq{\bareps{y} - y} = \normecq{\bareps{y} - z_{d}} + \normeq{y
         - z_{d}} -2\scalaireq{%
@@ -467,52 +447,51 @@ On établit ci-après, qu'on a en fait plus: la convergence forte.
             y - z_{d}
         },
     \end{equation*}
-    on conclut avec~\eqref{eq:control113} et~\eqref{eq:control118} que
+    we conclude with~\eqref{eq:control113} and~\eqref{eq:control118} that
     \begin{equation*}\label{eq:control120}
         \lim_{\veps\to 0}\normecq{\bareps{y} - y} = 0\qquad\ie\qquad
-        \begin{array}{rcllll}
-            \bareps{y} & \longrightarrow & y & \text{dans} & \Ldeux{Q} &
-            \text{fort}.
+        \begin{array}{rclll}
+            \bareps{y} & \longrightarrow & y & \text{strongly in} &
+            \Ldeux{Q}.
         \end{array}
     \end{equation*}
-    De manière analogue,~\eqref{eq:control112} et~\eqref{eq:control119}
-    amènent que
+    In a similar way,~\eqref{eq:control112} and~\eqref{eq:control119} lead
+    to
     \begin{equation*}
-        \begin{array}{rcllll}
-            \bareps{u} & \longrightarrow & u & \text{dans} & \Ldeux{Q} &
-            \text{fort},
+        \begin{array}{rclll}
+            \bareps{u} & \longrightarrow & u & \text{weakly in} & \Ldeux{Q},
         \end{array}
     \end{equation*}
-    ce qui finit de prouver le résultat annoncé.
+    which ends proving the announced result.
 \end{proof}
 
-\subsection{Système d'optimalité approché}\label{sec:approachedso}
+\subsection{Approached optimality system}\label{sec:approachedso}
 
-Soit $\veps > 0$. Rappelons qu'on a pour le contrôle $\bareps{u}\in\uad$,
-solution optimale de~\eqref{eq:control87}, qu'il existe
+Let $\veps > 0$. Let us start by recalling that we have, for the control
+$\bareps{u}\in\uad$, optimal solution of~\eqref{eq:control87}, there exists
 \begin{equation*}
-    {\bar{y}_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{et}\qquad
+    {\bar{y}_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{and}\qquad
     \bareps{y}\in\Ldeux{Q},
 \end{equation*}
-vérifiant
+verifying
 \begin{equation*}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
             \primetemps{\bareps{y}} - \Delta\bareps{y} & = & \bareps{u} &
-            \text{dans} & Q,\\
+            \text{in} & Q,\\
             \\
-            \bareps{y} & = & 0 & \text{sur} & \Sigma,\\
+            \bareps{y} & = & 0 & \text{on} & \Sigma,\\
             \\
             \condinitiale{\bareps{y}} & = & {\bar{y}_{0}}_{\veps} &
-            \text{dans} & \Omega,
+            \text{in} & \Omega,
         \end{array}
     \end{cases}
 \end{equation*}
-et l'estimation
+and the estimate
 \begin{equation*}
     \normeohm{\condfinale{\bareps{y}}} < \veps.
 \end{equation*}
-Soit alors $v\in\uad$ et $\lambda\in{\Rbb}^{*}$; on a:
+So, given $v\in\uad$ and $\lambda\in{\Rbb}^{*}$; we have:
 \begin{equation*}
     \begin{split}
         J_{\veps}\!\left({%
@@ -551,7 +530,7 @@ Soit alors $v\in\uad$ et $\lambda\in{\Rbb}^{*}$; on a:
         },
     \end{split}
 \end{equation*}
-ce qui amène que
+which gives
 \begin{equation*}
     {\left.{%
         \dfrac{\diff}{\diff{\lambda}}J_{\veps}\!\left({%
@@ -563,23 +542,23 @@ ce qui amène que
         \fieps{}
     } + N\scalaireq{\bareps{u}}{v - \bareps{u}},
 \end{equation*}
-où $\fieps = y\!\left({v - \bareps{u}, {\bar{y}_{0}}_{\veps}}\right) -
-y\!\left({0, {\bar{y}_{0}}_{\veps}}\right)$ est donné par
+where $\fieps = y\!\left({v - \bareps{u}, {\bar{y}_{0}}_{\veps}}\right) -
+y\!\left({0, {\bar{y}_{0}}_{\veps}}\right)$ is defined by
 \begin{equation}\label{eq:control125}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
             \primetemps{\fieps} - \Delta\fieps & = & v - \bareps{u} &
-            \text{dans} & Q,\\
+            \text{in} & Q,\\
             \\
-            \fieps & = & 0 & \text{sur} & \Sigma,\\
+            \fieps & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condinitiale{\fieps} & = & 0 & \text{dans} & \Omega.
+            \condinitiale{\fieps} & = & 0 & \text{in} & \Omega.
         \end{array}
     \end{cases}
 \end{equation}
-Ainsi donc on obtient par la condition d'optimalité du premier ordre
-d'Euler-Lagrange que le contrôle optimal approché $\bareps{u}$ est l'unique
-élément de $\uad$ satisfaisant
+Hence, we obtain with the first-ordre optimality condition of
+Euler-Lagrange that the approached optimal control $\bareps{u}$ is the
+unique element of $\uad$ satisfying
 \begin{equation}\label{eq:control126}
     \scalaireq{%
         \bareps{y} - z_{d}
@@ -591,27 +570,27 @@ d'Euler-Lagrange que le contrôle optimal approché $\bareps{u}$ est l'unique
         v - \bareps{u}
     } \geq 0,\qquad\forall\,v\in\uad.
 \end{equation}
-Introduisons alors l'état adjoint $p_{\veps}\in\Ldeux{Q}$ par
+Let introduce here the adjoint state $p_{\veps}\in\Ldeux{Q}$ by
 \begin{equation*}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
             -\primetemps{p_{\veps}} - \Delta p_{\veps} & = & \bareps{y} -
-            z_{d} & \text{dans} & Q,\\
+            z_{d} & \text{in} & Q,\\
             \\
-            p_{\veps} & = & 0 & \text{sur} & \Sigma,\\
+            p_{\veps} & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condfinale{p_{\veps}} & = & 0 & \text{dans} & \Omega.
+            \condfinale{p_{\veps}} & = & 0 & \text{in} & \Omega.
         \end{array}
     \end{cases}
 \end{equation*}
-Il vient avec~\eqref{eq:control125} que
+It comes with~\eqref{eq:control125} that
 \begin{equation*}
     \begin{array}{rclll}
         -\primetemps{p_{\veps}} - \Delta p_{\veps} & = & \bareps{y} - z_{d}
-        & \text{dans} & Q
+        & \text{in} & Q
     \end{array}
 \end{equation*}
-amène
+leads to
 \begin{equation*}
     \begin{split}
          \scalaireq{%
@@ -664,7 +643,7 @@ amène
         },
     \end{split}
 \end{equation*}
-de sorte que la condition d'optimalité~\eqref{eq:control126} se réduit à
+so that the optimality condition~\eqref{eq:control126} reduces to
 \begin{equation*}
     \begin{array}{rcl}
         \scalaireq{%
@@ -675,45 +654,45 @@ de sorte que la condition d'optimalité~\eqref{eq:control126} se réduit à
     \end{array}
 \end{equation*}
 
-On obtient ainsi le résultat suivant.
+We thus obtain the following result.
 
 \begin{theoreme}\label{thm:soapproche}%
-    Soit $\veps > 0$. Le contrôle $\bareps{u}$ est solution unique
-    de~\eqref{eq:control87} si et seulement si le quadruplet
+    Let $\veps > 0$. The control $\bareps{u}$ is unique solution
+    of~\eqref{eq:control87} if and only if the quadruplet
     \begin{equation*}
         \left\{{%
             {\bar{y}_{0}}_{\veps}, \bareps{u}, \bareps{y}, p_{\veps}
         }\right\}\in \Ldeux{\Omega}\times {\left({\Ldeux{Q}}\right)}^{3}
     \end{equation*}
-    est solution du système d'optimalité approché défini par les systèmes
-    d'équations aux dérivées partielles
+    is solution of the approached optimality system defined by the partial
+    differential equations systems
     \begin{equation}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
                 \primetemps{\bareps{y}} - \Delta\bareps{y} & = & \bareps{u}
-                & \text{dans} & Q,\\
+                & \text{in} & Q,\\
                 \\
-                \bareps{y} & = & 0 & \text{sur} & \Sigma,\\
+                \bareps{y} & = & 0 & \text{on} & \Sigma,\\
                 \\
                 \condinitiale{\bareps{y}} & = & {\bar{y}_{0}}_{\veps} &
-                \text{dans} & \Omega,
+                \text{in} & \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    et
+    and
     \begin{equation}\label{eq:control130}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
                 -\primetemps{p_{\veps}} - \Delta p_{\veps} & = & \bareps{y}
-                - z_{d} & \text{dans} & Q,\\
+                - z_{d} & \text{in} & Q,\\
                 \\
-                p_{\veps} & = & 0 & \text{sur} & \Sigma,\\
+                p_{\veps} & = & 0 & \text{on} & \Sigma,\\
                 \\
-                \condfinale{p_{\veps}} & = & 0 & \text{dans} & \Omega,
+                \condfinale{p_{\veps}} & = & 0 & \text{in} & \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    l'estimation
+    the estimate
     \begin{equation}
         \begin{array}{rcl}
             \normeohm{%
@@ -721,7 +700,7 @@ On obtient ainsi le résultat suivant.
             } & < & \veps,
         \end{array}
     \end{equation}
-    et l'inégalité variationnelle
+    and the variational inequality
     \begin{equation}
         \begin{array}{rcl}
             \scalaireq{%
@@ -733,74 +712,71 @@ On obtient ainsi le résultat suivant.
     \end{equation}
 \end{theoreme}
 
-\subsection{Système d'optimalité singulier}\label{sec:singularso}
+\subsection{Singular optimality system}\label{sec:singularso}
 
-D'après les résultats de la Section~\ref{sec:convergence}, on a:
+From the results obtained in Section~\ref{sec:convergence}, we have:
 \begin{equation*}
-    \begin{array}{rcllll}
-        \bareps{u} & \longrightarrow & u & \text{dans} & \Ldeux{Q} &
-        \text{fort}
+    \begin{array}{rclll}
+        \bareps{u} & \longrightarrow & u & \text{strongly in} & \Ldeux{Q}
     \end{array}
 \end{equation*}
 \begin{equation*}
-    \begin{array}{rcllll}
-        \bareps{y} & \longrightarrow & y & \text{dans} & \Ldeux{Q} &
-        \text{fort},
+    \begin{array}{rclll}
+        \bareps{y} & \longrightarrow & y & \text{strongly in} & \Ldeux{Q},
     \end{array}
 \end{equation*}
-où $(u,y)$ est le couple contrôle-état optimal
-pour~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
+where $(u,y)$ is the optimal control-state pair
+of~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
 
-Alors,~\eqref{eq:control130} étant bien posé au sens de Hadamard, il suit
-qu'il existe $p\in\Ldeux{Q}$ tel que
+So that,~\eqref{eq:control130} being well-posed in the sense of Hadamard,
+it follows that there exists $p\in\Ldeux{Q}$ such that
 \begin{equation*}
-    \begin{array}{rcllll}
-        p_{\veps} & \longrightarrow & p & \text{dans} & \Ldeux{Q} &
-        \text{fort}.
+    \begin{array}{rclll}
+        p_{\veps} & \longrightarrow & p & \text{strongly in} & \Ldeux{Q}.
     \end{array}
 \end{equation*}
-On passe alors aisément les résultats du~Théorème~\ref{thm:soapproche}
-précédent à la limite lorsque $\veps\to 0$, pour obtenir que le système
-d'optimalité singulier fort caractérisant le couple contrôle-état optimal
-pour~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} est tel
-que ci-dessous précisé.
+Then, we easily pass the results of Theorem~\ref{thm:soapproche} to the
+limit, when $\veps\to 0$, to obtain that the strong singular optimaly
+system charcaterizing the optimal control-state pair
+of~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} is as
+specified below.
 
 \begin{theoreme}\label{thm:sosingulier}%
-    Le couple $(u,y)$ est solution unique du
-    problème~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}
-    si et seulement si le triplet
+    The control-state pair $(u,y)$ is unique solution of the control
+    problem~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} if
+    and only if the triple
     \begin{equation*}
         \left\{{%
             u,y,p
         }\right\}\in {\left({\Ldeux{Q}}\right)}^{3}
     \end{equation*}
-    est solution du système d'optimalité singulier défini par les systèmes
-    d'équations aux dérivées partielles
+    is solution of the singular optimality system defined by the partial
+    differential equation systems
     \begin{equation}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
-                \primetemps{y} - \Delta y & = & u & \text{dans} & Q,\\
+                \primetemps{y} - \Delta y & = & u & \text{in} & Q,\\
                 \\
-                y & = & 0 & \text{sur} & \Sigma,\\
+                y & = & 0 & \text{on} & \Sigma,\\
                 \\
-                \condfinale{y} & = & 0 & \text{dans} & \Omega,
+                \condfinale{y} & = & 0 & \text{in} & \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    et
+    and
     \begin{equation}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
-                -\primetemps{p} - \Delta p & = & y - z_{d} & \text{dans} &
+                -\primetemps{p} - \Delta p & = & y - z_{d} & \text{in} &
                 Q,\\
                 \\
-                p & = & 0 & \text{sur} & \Sigma,\\
+                p & = & 0 & \text{on} & \Sigma,\\
                 \\
-                \condfinale{p} & = & 0 & \text{dans} & \Omega,
+                \condfinale{p} & = & 0 & \text{in} & \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    et l'inégalité variationnelle
+    and the variational inequality
     \begin{equation}
         \begin{array}{rcll}
             \scalaireq{%

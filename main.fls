@@ -19,6 +19,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel-french/french.ldf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel-french/french.ldf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel-french/french.ldf
@@ -26,6 +29,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/fr/babel-frenc
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/fr/babel-fr.ini
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-en.ini
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/carlisle/scalefnt.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/carlisle/scalefnt.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
@@ -180,6 +187,9 @@ OUTPUT main.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/french.lbx
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 OUTPUT main.bcf
 INPUT main.bbl
 INPUT ./main.bbl

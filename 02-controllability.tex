@@ -1,128 +1,128 @@
-\section{Contrôlabilité de l'équation de la chaleur
-rétrograde}\label{sec:controllability}
+\section{Controllability of the ill-posed backwards heat
+equation}\label{sec:controllability}
 
-Dans la présente section, nous introduisons le point de vue par
-contrôlabilité ici proposé. Lequel consiste, partant de la notion de
-contrôlabilité introduite par J.-L.~Lions dans~\cite[222]{lions1}, à
-interpréter le problème initial comme un problème inverse (nous disons
-aussi un problème de contrôlabilité).
+In the present section, we introduce controllability viewpoint here
+proposed. Which consists, starting from the notion of controllability
+introduced by J.-L.~Lions in~\cite[222]{lions1}, in interpreting the
+initial state equation as an inverse problem (we also say a controllability
+problem).
 
-On établit que, lorsqu'elle existe, la solution de l'équation de la chaleur
-rétrograde~\eqref{eq:initial-problem} est aussi solution du problème de
-contrôlabilité. Ce qui permet alors d'établir une condition nécessaire et
-suffisante caractérisant l'existence d'une solution régulière au
-problème~\eqref{eq:initial-problem}.
+We establish that, when it exists, the solution of the ill-posed backwards
+heat equation~\eqref{eq:initial-problem} is also, in the limit, a solution
+of the approached controllability problem. Which then makes it possible to
+establish a necessary and sufficient condition characterizing the existence
+of a regular solution to the problem~\eqref{eq:initial-problem}.
 
-On interprète donc~\eqref{eq:initial-problem} comme un problème inverse
-dont l'objectif d'observation consiste en la condition finale
+We therefore interpret~\eqref{eq:initial-problem} as an inverse problem
+whose observation objective consists in the final condition
 \begin{equation*}
     \begin{array}{rclll}
-        \condfinale{z} & = & 0 & \text{dans} & \Omega.
+        \condfinale{z} & = & 0 & \text{in} & \Omega.
     \end{array}
 \end{equation*}
 
-Plus précisément, on considère le système
+More precisely, we consider the following problem
 \begin{equation*}\label{eq:inverse-problem-1}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
-            \primetemps{y} - \Delta y & = & v & \text{dans} & Q,\\
+            \primetemps{y} - \Delta y & = & v & \text{in} & Q,\\
             \\
-            y & = & 0 & \text{sur} & \Sigma,
+            y & = & 0 & \text{on} & \Sigma,
         \end{array}
     \end{cases}
 \end{equation*}
-se posant le problème de trouver $\displaystyle y_{0}\in\Ldeux{\Omega}$ tel
-que si
+posing the problem of finding $\displaystyle y_{0}\in\Ldeux{\Omega}$ such
+that if
 \begin{equation}\label{eq:inverse-problem-2}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
-            \primetemps{y} - \Delta y & = & v & \text{dans} & Q,\\
+            \primetemps{y} - \Delta y & = & v & \text{in} & Q,\\
             \\
-            y & = & 0 & \text{sur} & \Sigma,\\
+            y & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condinitiale{y} & = & y_{0} & \text{dans} & \Omega,
+            \condinitiale{y} & = & y_{0} & \text{in} & \Omega,
         \end{array}
     \end{cases}
 \end{equation}
-alors
+then
 \begin{equation}\label{eq:inverse-problem-3}
     \begin{array}{rclll}
-        \condfinale{y} & = & 0 & \text{dans} & \Omega.
+        \condfinale{y} & = & 0 & \text{in} & \Omega.
     \end{array}
 \end{equation}
-On dit que~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3}
-constitue un problème de contrôlabilité exacte associé à l'équation de la
-chaleur rétrograde~\eqref{eq:initial-problem}.
+We say that~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3}
+constitutes an exact controllability problem associated with the ill-posed
+backward heat equation~\eqref{eq:initial-problem}.
 
 \begin{remarque}%
-    Le problème de contrôlabilité est bien défini. En effet, il est bien
-    connu que pour tous $v\in\Ldeux{Q}$ et
-    $y_{0}\in\Ldeux{\Omega}$,~\eqref{eq:inverse-problem-2} est bien posé au
-    sens de Hadamard, soit qu'il admet une solution unique
+    The controllability problem is well defined. Indeed, it is well known
+    that for any $v\in\Ldeux{Q}$ and
+    $y_{0}\in\Ldeux{\Omega}$,~\eqref{eq:inverse-problem-2} is well posed in
+    the sense of Hadamard. That is to say that its admits a unique solution
     \begin{equation*}\label{eq:well-posedness-heat-equation}
         y\!\left({v,y_{0}}\right)\in \Vbb := \Ldeux{0,T;
         H_{0}^{1}(\Omega)}\cap \Cscr\!\left({[0,T];\Ldeux{\Omega}}\right)
     \end{equation*}
-    qui dépend continûment des données. On en déduit, qu'après modification
-    éventuelle sur un ensemble de mesure nulle, la solution
-    $y\!\left({v,y_{0}}\right)$ de~\eqref{eq:inverse-problem-2}
-    se confond à une fonction continue de $[0,T]$ dans $\Ldeux{\Omega}$.
+    which depends continuously on the data. We deduce from this that, after
+    possible modification on a set of zero measure, the solution
+    $y\!\left({v,y_{0}}\right)$ of~\eqref{eq:inverse-problem-2} merges with
+    a continuous function from $(0,T)$ to $\Ldeux{\Omega}$.
 
-    Ainsi on peut bien parler de la valeur finale
-    $y\!\left({\cdot,T;v,y_{0}}\right)$ de
-    $y\!\left({v,y_{0}}\right)$ dans $\Omega$.
+    Thus we can indeed speak of the final value
+    $y\!\left({\cdot,T;v,y_{0}}\right)$ of $y\!\left({v,y_{0}}\right)$ in
+    $\Omega$.
 \end{remarque}
 
 \begin{remarque}%
-    Notons
+    Let us denote
     \begin{itemize}
-        \item $y^{v}$ la solution unique de~\eqref{eq:inverse-problem-2};
-        \item $y_{0}^{v}\in \Vbb \subset \Ldeux{Q}$ celle de
+        \item $y^{v}$ the unique solution of~\eqref{eq:inverse-problem-2};
+        \item $y_{0}^{v}\in \Vbb \subset \Ldeux{Q}$ that of
             \begin{equation*}\label{eq:null-initial-condition}
                 \begin{cases}\displaystyle
                     \begin{array}{rclll}
                         \primetemps{y_{0}^{v}} - \Delta y_{0}^{v} & = & v &
-                        \text{dans} & Q,\\
+                        \text{in} & Q,\\
                         \\
-                        y_{0}^{v} & = & 0 & \text{sur} & \Sigma,\\
+                        y_{0}^{v} & = & 0 & \text{on} & \Sigma,\\
                         \\
                         y_{0}^{v}\!\left({\cdot,0}\right) & = & 0 &
-                        \text{dans} & \Omega,
+                        \text{in} & \Omega,
                     \end{array}
                 \end{cases}
             \end{equation*}
-        \item et $y^{0}\in \Vbb \subset \Ldeux{Q}$ celle de
+        \item and $y^{0}\in \Vbb \subset \Ldeux{Q}$ that of
             \begin{equation}\label{eq:null-source-term}
                 \begin{cases}\displaystyle
                     \begin{array}{rclll}
                         \primetemps{y^{0}} - \Delta y^{0} & = & 0 &
-                        \text{dans} & Q,\\
+                        \text{in} & Q,\\
                         \\
-                        y^{0} & = & 0 & \text{sur} & \Sigma,\\
+                        y^{0} & = & 0 & \text{on} & \Sigma,\\
                         \\
                         y^{0}\!\left({\cdot,0}\right) & = & y_{0} &
-                        \text{dans} & \Omega.
+                        \text{in} & \Omega.
                     \end{array}
                 \end{cases}
             \end{equation}
     \end{itemize}
-    On a alors que l'application
+    Then we have that the mapping
     \begin{equation*}
         \left({v,y_{0}}\right)\longmapsto y^{v} = y_{0}^{v} + y^{0},
     \end{equation*}
-    est linéaire continue de $\Ldeux{Q}\times \Ldeux{Q}$ dans $\Vbb\subset
+    is linear and continuous from $\Ldeux{Q}\times \Ldeux{Q}$ to $\Vbb\subset
     \Ldeux{Q}$.
 
-    On en déduit que le problème de contrôlabilité
-    exacte~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3} est
-    équivalent au suivant
+    We deduce that the exact controllability
+    problem~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3} is
+    equivalent to the following
     \begin{equation}\label{eq:inverse-problem-4}
         \begin{cases}\displaystyle
-            \text{trouver}\ y_{0}\in \Ldeux{\Omega}\ \text{tel que:}\\
-            \text{si}\ y^{0}\ \text{est solution
-            de}~\eqref{eq:null-source-term},\ \text{alors}\\
+            \text{find}\ y_{0}\in \Ldeux{\Omega}\ \text{such that:}\\
+            \text{if}\ y^{0}\ \text{is solution
+            of}~\eqref{eq:null-source-term},\ \text{then}\\
             y^{0}\!\left({\cdot,T}\right) = -y_{0}^{v}\!\left({\cdot,
-            T}\right)\quad \text{dans}\ \Omega.
+            T}\right)\quad \text{in}\ \Omega.
         \end{cases}
     \end{equation}
 \end{remarque}
@@ -138,34 +138,32 @@ chaleur rétrograde~\eqref{eq:initial-problem}.
 %     qui est non vide et non seulement $\Ascr$.
 % \end{remarque}
 
-On approche, par argument de densité, le problème de contrôlabilité
-exacte~\eqref{eq:inverse-problem-4} par un problème, dit de contrôlabilité
-approchée et en réponse duquel on a le résultat suivant.
+We approach the exact controllability problem~\eqref{eq:inverse-problem-4}
+by density argument as specified below.
 
 \begin{proposition}\label{propo:controllability-result-1}%
-    Lorsque la donnée initiale $y_{0}$ parcourt $\Ldeux{\Omega}$,
-    l'ensemble
+    When the initial data $y_{0}$ traverses $\Ldeux{\Omega}$, the set
     \begin{equation*}\label{eq:controllability-result-1}
         E = \left\{{%
             y^{0}\!\left({\cdot,T}\right)\,;\ y_{0}\in\Ldeux{\Omega}
         }\right\},
     \end{equation*}
-    décrit par les valeurs finales de la solution $y^{0}$
-    de~\eqref{eq:null-source-term}, est dense dans $\Ldeux{\Omega}$.
+    described by the final values of the solution $y^{0}$
+    of~\eqref{eq:null-source-term}, is dense in $\Ldeux{\Omega}$.
 \end{proposition}
 
 \begin{proof}%
-    On a clairement que $E$ est un sous-espace vectoriel de
-    $\Ldeux{\Omega}$. D'où, par le Théorème de Hahn-Banach, $E$ est dense
-    dans $\Ldeux{\Omega}$ si et seulement si $E^{\perp} = \{0\}$.
+    It is clear that the set $E$ constitute a vector subspace of
+    $\Ldeux{\Omega}$. From where, by the Hahn-Banach Theorem, $E$ is dense
+    in $\Ldeux{\Omega}$ if and only if $E^{\perp} = \{0\}$.
 
-    Soit $k\in E^{\perp}$; on a
+    Let us consider $k\in E^{\perp}$; so we have
     \begin{equation*}\label{eq:proof-controllability-26}
         \forall\,y_{0}\in\Ldeux{\Omega},\qquad
         \scalaireohm{k}{y^{0}\!\left({\cdot,T}\right)} = 0.
     \end{equation*}
-    Mais il vient de~\eqref{eq:null-source-term} que, pour toute fonction
-    test $\vphi\in\Dscr(Q)$, on a:
+    But it comes from~\eqref{eq:null-source-term} that, for any test
+    function $\vphi\in\Dscr(Q)$, we have:
     \begin{equation*}
         \begin{split}
             \scalaireq{\primetemps{y^{0}} - \Delta y^{0}}{\vphi} = 0 &\iff
@@ -214,21 +212,20 @@ approchée et en réponse duquel on a le résultat suivant.
             }{\vphi} = 0.
         \end{split}
     \end{equation}
-    Choisissons dans ce qui précède $\vphi$ telle que
+    Choosing $\vphi$, in the above, such that
     \begin{equation}\label{eq:controllability-proof-31}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
-                -\primetemps{\vphi} - \Delta\vphi & = & 0 & \text{dans} &
-                Q,\\
+                -\primetemps{\vphi} - \Delta\vphi & = & 0 & \text{in} & Q,\\
                 \\
-                \vphi & = & 0 & \text{sur} & \Sigma,\\
+                \vphi & = & 0 & \text{on} & \Sigma,\\
                 \\
-                \vphi\!\left({\cdot,T}\right) & = & k & \text{dans} &
-                \Omega.
+                \vphi\!\left({\cdot,T}\right) & = & k & \text{in} &
+                \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    Alors il vient que~\eqref{eq:controllability-proof-30} équivaut à
+    it comes that~\eqref{eq:controllability-proof-30} is equivalent to
     \begin{equation}\label{eq:controllability-proof-32}
         \scalaireohm{k}{y^{0}\!\left({\cdot,T}\right)} - \scalaireohm{%
             y_{0}
@@ -236,135 +233,123 @@ approchée et en réponse duquel on a le résultat suivant.
             \vphi\!\left({\cdot,0}\right)
         } = 0,
     \end{equation}
-    où
+    where
     \begin{equation*}
         k\in E^{\perp}\iff \scalaireohm{k}{y^{0}\!\left({\cdot,T}\right)} =
         0.
     \end{equation*}
-    Ainsi~\eqref{eq:controllability-proof-32} devient
+    Thus~\eqref{eq:controllability-proof-32} becomes
     \begin{equation}\label{eq:controllability-proof-33}
         \forall\,y_{0}\in\Ldeux{\Omega},\qquad \scalaireohm{y_{0}}{%
             \vphi\!\left({\cdot,0}\right)
         } = 0.
     \end{equation}
-    Mais on peut encore choisir dans~\eqref{eq:controllability-proof-33},
-    $\displaystyle y_{0} = \vphi\!\left({\cdot,0}\right)$ dans $\Omega$, et
-    alors il suit
+    But we can still choose, in~\eqref{eq:controllability-proof-33},
+    $\displaystyle y_{0} = \vphi\!\left({\cdot,0}\right)$ in $\Omega$, and
+    then it follows
     \begin{equation*}
         \normecohm{\vphi\!\left({\cdot,0}\right)} = 0\qquad\ie\qquad
         \begin{array}{rclll}
-            \vphi\!\left({\cdot,0}\right) & = & 0 & \text{dans} & \Omega.
+            \vphi\!\left({\cdot,0}\right) & = & 0 & \text{in} & \Omega.
         \end{array}
     \end{equation*}
-    Ce qui amène, avec~\eqref{eq:controllability-proof-31}, que $\vphi$
-    est solution de
+    Which brings, with~\eqref{eq:controllability-proof-31}, that $\vphi$ is
+    solution of
     \begin{equation*}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
-                -\primetemps{\vphi} - \Delta\vphi & = & 0 & \text{dans} &
+                -\primetemps{\vphi} - \Delta\vphi & = & 0 & \text{in} &
                 Q,\\
                 \\
-                \vphi & = & 0 & \text{sur} & \Sigma,\\
+                \vphi & = & 0 & \text{on} & \Sigma,\\
                 \\
-                \vphi\!\left({\cdot,0}\right) & = & 0 & \text{dans} &
+                \vphi\!\left({\cdot,0}\right) & = & 0 & \text{in} &
                 \Omega,
             \end{array}
         \end{cases}
     \end{equation*}
-    c'est-à-dire que $\vphi\equiv 0$ et par suite que
+    that is to say that $\vphi\equiv 0$ and consequently that
     \begin{equation*}
         \begin{array}{rclll}
-            \vphi\!\left({\cdot,T}\right) & = & k = 0 & \text{dans} &
+            \vphi\!\left({\cdot,T}\right) & = & k = 0 & \text{in} &
             \Omega.
         \end{array}
     \end{equation*}
-    % On en déduit que
-    % \begin{equation}
-    %     \forall\,k\in E^{\perp},\qquad k = 0,
-    % \end{equation}
-    D'où on déduit bien que $E^{\perp} = \{0\}$ et donc que $E$ est dense
-    dans $\Ldeux{\Omega}$.
+    From where we deduce that $E^{\perp} = \{0\}$ and therefore that $E$ is
+    dense in $\Ldeux{\Omega}$.
 \end{proof}
 
-Le résultat suivant est alors immédiat.
+The following result is then immediate.
 
 \begin{corollaire}\label{coro:controllability-result-2}%
-    Pour tous $\veps > 0$ et $\kappa\in\Ldeux{\Omega}$, il existe
-    ${y_{0}}_{\veps}\in\Ldeux{\Omega}$ tel que la solution $\displaystyle
-    y_{\veps}^{0}\in \Vbb$ de
-    % \begin{equation}\label{eq:controllability-result-2}
-    %     y_{\veps}^{0}\in \Vbb
-    % \end{equation}
-    % de
+    For any $\veps > 0$ and $\kappa\in\Ldeux{\Omega}$, there exists
+    ${y_{0}}_{\veps}\in\Ldeux{\Omega}$ such that the solution $\displaystyle
+    y_{\veps}^{0}\in \Vbb$ of
     \begin{equation}\label{eq:controllability-result-3}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
                 \primetemps{y_{\veps}^{0}} - \Delta y_{\veps}^{0} & = & v &
-                \text{dans} & Q,\\
+                \text{in} & Q,\\
                 \\
-                y_{\veps}^{0} & = & 0 & \text{sur} & \Sigma,\\
+                y_{\veps}^{0} & = & 0 & \text{on} & \Sigma,\\
                 \\
                 y_{\veps}^{0}\!\left({\cdot,0}\right) & = & {y_{0}}_{\veps}
-                & \text{dans} & \Omega,
+                & \text{in} & \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    satisfait
+    also satisfies
     \begin{equation*}\label{eq:controllability-result-4}
         \normeohm{y_{\veps}^{0}\!\left({\cdot,T}\right) - \kappa} < \veps.
     \end{equation*}
 \end{corollaire}
 
-D'où il découle aussi que
+From which it also follows that
 
 \begin{corollaire}\label{coro:controllability-result-3}%
-    Pour tous $v\in\Ldeux{Q}$ et $\veps > 0$, il existe ${y_{0}}_{\veps}\in
-    \Ldeux{\Omega}$ tel que la solution $\displaystyle
-    y_{\veps}^{v}\in \Vbb$ de
-    % \begin{equation}\label{eq:controllability-result-7}
-    %     y_{\veps}^{v}\in \Vbb
-    % \end{equation}
-    % de
+    Given $v\in\Ldeux{Q}$ and $\veps > 0$, there exists ${y_{0}}_{\veps}\in
+    \Ldeux{\Omega}$ such that the solution $\displaystyle y_{\veps}^{v}\in
+    \Vbb$ of
     \begin{equation}\label{eq:controllability-result-5}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
                 \primetemps{y_{\veps}^{v}} - \Delta y_{\veps}^{v} & = & v &
-                \text{dans} & Q,\\
+                \text{in} & Q,\\
                 \\
-                y_{\veps}^{v} & = & 0 & \text{sur} & \Sigma,\\
+                y_{\veps}^{v} & = & 0 & \text{on} & \Sigma,\\
                 \\
                 y_{\veps}^{v}\!\left({\cdot,0}\right) & = & {y_{0}}_{\veps}
-                & \text{dans} & \Omega,
+                & \text{in} & \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    satisfait
+    satisfies
     \begin{equation*}\label{eq:controllability-result-6}
         \normeohm{y_{\veps}^{v}\!\left({\cdot,T}\right)} < \veps.
     \end{equation*}
 \end{corollaire}
 
 \begin{proof}%
-    Soient $v\in\Ldeux{Q}$ et $\veps > 0$. On sait qu'il existe un unique
-    $y_{0}^{v}\in \Vbb$, égal presque partout à une fonction continue de
-    $[0,T]$ dans $\Ldeux{\Omega}$, solution de
+    Let $v\in\Ldeux{Q}$ and $\veps > 0$. We know that there exists a unique
+    $y_{0}^{v}\in \Vbb$, almost everywhere equal to a continuous mapping
+    from $(0,T)$ to $\Ldeux{\Omega}$, solution of
     \begin{equation*}\label{eq:controllability-proof-39}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
                 \primetemps{y_{0}^{v}} - \Delta y_{0}^{v} & = & v &
-                \text{dans} & Q,\\
+                \text{in} & Q,\\
                 \\
-                y_{0}^{v} & = & 0 & \text{sur} & \Sigma,\\
+                y_{0}^{v} & = & 0 & \text{on} & \Sigma,\\
                 \\
-                y_{0}^{v}\!\left({\cdot,0}\right) & = & 0 & \text{dans} &
+                y_{0}^{v}\!\left({\cdot,0}\right) & = & 0 & \text{in} &
                 \Omega.
             \end{array}
         \end{cases}
     \end{equation*}
-    Il suit, avec le
-    Corollaire~\ref{coro:controllability-result-2}, qu'il existe bien
-    ${y_{0}}_{\veps}\in\Ldeux{\Omega}$ tel que la solution
-    $y_{\veps}^{0}\in \Vbb$ de~\eqref{eq:controllability-result-3} vérifie
+    It follows that, with Corollary~\ref{coro:controllability-result-2},
+    there exists ${y_{0}}_{\veps}\in\Ldeux{\Omega}$ such that the solution
+    $y_{\veps}^{0}\in \Vbb$ of~\eqref{eq:controllability-result-3}
+    satisfies
     \begin{equation*}\label{eq:controllability-proof-40}
         \normeohm{%
             y_{\veps}^{0}\!\left({\cdot,T}\right) - \left({%
@@ -372,11 +357,11 @@ D'où il découle aussi que
             }\right)
         } < \veps.
     \end{equation*}
-    Ce qui permet bien de conclure que $\displaystyle y_{\veps}^{v} =
+    Which allows us to conclude that $\displaystyle y_{\veps}^{v} =
     \left({%
         y_{0}^{v} + y_{\veps}^{0}
-    }\right) \in \Vbb$ est solution unique
-    de~\eqref{eq:controllability-result-5} avec
+    }\right) \in \Vbb$ is unique solution
+    of~\eqref{eq:controllability-result-5}, with
     \begin{equation*}
         \normeohm{y_{\veps}^{v}\!\left({\cdot,T}\right)} = \normeohm{%
             y_{0}^{\veps}\!\left({\cdot,T}\right) +
@@ -385,132 +370,107 @@ D'où il découle aussi que
     \end{equation*}
 \end{proof}
 
-De plus, on a le théorème suivant caractérisant l'existence d'une solution
-régulière à l'équation de la chaleur rétrograde.
+More over, we have the following theorem, characterizing the existence of a
+regular solution to the ill-posed backwards heat equation.
 
 \begin{theoreme}\label{thm:controllability-result-5}%
-    Soit $v\in\Ldeux{Q}$. L'équation de la chaleur rétrograde
+    Let $v\in\Ldeux{Q}$. The ill-posed backwards heat equation
     \begin{equation}\label{eq:initial-problem-2}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
-                \primetemps{z} - \Delta z & = & v & \text{dans} & Q,\\
+                \primetemps{z} - \Delta z & = & v & \text{in} & Q,\\
                 \\
-                z & = & 0 & \text{sur} & \Sigma,\\
+                z & = & 0 & \text{on} & \Sigma,\\
                 \\
-                z(\cdot,T) & = & 0 & \text{dans} & \Omega,
+                z(\cdot,T) & = & 0 & \text{in} & \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    admet une solution régulière $z\in \Vbb$, si et seulement si la
-    suite $\displaystyle {\left({{y_{0}}_{\veps}}\right)}_{\veps}$ est
-    bornée dans $\Ldeux{\Omega}$.
+    admits a regular solution $z\in \Vbb$ if and only if the sequence
+    $\displaystyle {\left({{y_{0}}_{\veps}}\right)}_{\veps}$ is bounded in
+    $\Ldeux{\Omega}$.
 \end{theoreme}
 
 \begin{proof}%
     \begin{enumerate}
-        \item Soit $\veps > 0$. D'après
-            le~Corollaire~\ref{coro:controllability-result-2}, il existe
-            ${y_{0}}_{\veps}\in \Ldeux{\Omega}$ tel que $\displaystyle
-            y_{\veps}^{v}\in \Vbb$ soit solution de
+        \item Let $\veps > 0$. From
+            Corollary~\ref{coro:controllability-result-2}, there exists
+            ${y_{0}}_{\veps}\in \Ldeux{\Omega}$ such as $\displaystyle
+            y_{\veps}^{v}\in \Vbb$ is solution of
             \begin{equation}\label{eq:proof-thm-controllability-42}
                 \begin{cases}\displaystyle
                     \begin{array}{rclll}
                         \primetemps{y_{\veps}^{v}} - \Delta y_{\veps}^{v} &
-                        = & v & \text{dans} & Q,\\
+                        = & v & \text{in} & Q,\\
                         \\
-                        y_{\veps}^{v} & = & 0 & \text{sur} & \Sigma,\\
+                        y_{\veps}^{v} & = & 0 & \text{on} & \Sigma,\\
                         \\
                         y_{\veps}^{v}\!\left({\cdot,0}\right) & = &
-                        {y_{0}}_{\veps} & \text{dans} & \Omega,
+                        {y_{0}}_{\veps} & \text{in} & \Omega,
                     \end{array}
                 \end{cases}
             \end{equation}
-            avec l'estimation
+            with the estimate
             \begin{equation*}\label{eq:proof-thm-controllability-43}
                 \normeohm{y_{\veps}^{v}\!\left({\cdot, T}\right)} < \veps.
             \end{equation*}
-            On génère ainsi des suites
+            Then, we generate sequences
             \begin{equation*}
                 {\left({{y_{0}}_{\veps}}\right)}_{\veps}\subset
-                \Ldeux{\Omega}\qquad\text{et}\qquad
+                \Ldeux{\Omega}\qquad\text{and}\qquad
                 {\left({y_{\veps}^{v}}\right)}_{\veps}\subset \Vbb.
             \end{equation*}
-            Supposons alors que la suite
-            ${\left({{y_{0}}_{\veps}}\right)}_{\veps}$ bornée dans
-            $\Ldeux{\Omega}$. Il suit que, le
-            problème~\eqref{eq:proof-thm-controllability-42} de Dirichlet
-            homogène pour l'équation de la chaleur, étant bien posé, que la
-            suite ${\left({y_{\veps}^{v}}\right)}_{\veps}$ est bornée dans
-            $\Vbb$, et donc encore dans $\Ldeux{Q}$.
+            Assuming that the sequence
+            ${\left({{y_{0}}_{\veps}}\right)}_{\veps}$ is bounded in
+            $\Ldeux{\Omega}$. Therefore, it follows that, the homogeneous
+            Dirichlet problem~\eqref{eq:proof-thm-controllability-42} for
+            the heat equation being well-posed, the sequence
+            ${\left({y_{\veps}^{v}}\right)}_{\veps}$ is bounded in $\Vbb$,
+            and therefore also in $\Ldeux{Q}$.
 
-            On en déduit qu'on peut extraire, de
-            ${\left({{y_{0}}_{\veps}}\right)}_{\veps}$ et
-            ${\left({y_{\veps}^{v}}\right)}_{\veps}$, des sous-suites
-            encore notées de même qui convergent faiblement dans
-            $\Ldeux{\Omega}$ et $\Vbb$, respectivement.
+            So we can extract from
+            ${\left({{y_{0}}_{\veps}}\right)}_{\veps}$ and
+            ${\left({y_{\veps}^{v}}\right)}_{\veps}$ subsequences, still
+            denoted in the same way, which converge weakly in
+            $\Ldeux{\Omega}$ and $\Vbb$, respectively.
 
-            Soit qu'il existe $\displaystyle y_{0}\in \Ldeux{\Omega}$ et
-            $\displaystyle y^{v}\in \Vbb$, tels que
+            So that, there exists $\displaystyle y_{0}\in \Ldeux{\Omega}$
+            and $\displaystyle y^{v}\in \Vbb$, such as
             \begin{equation*}\label{eq:proof-thm-controllability-44}
                 \begin{cases}\displaystyle
-                    \begin{array}{rcllll}
+                    \begin{array}{rclll}
                         {y_{0}}_{\veps} & \longrightarrow & y_{0} &
-                        \text{dans} & \Ldeux{\Omega} & \text{faible},\\
+                        \text{weakly in} & \Ldeux{\Omega},\\
                         \\
                         y_{\veps}^{v} & \longrightarrow & y^{v} &
-                        \text{dans} & \Vbb & \text{faible}.
+                        \text{weakly in} & \Vbb.
                     \end{array}
                 \end{cases}
             \end{equation*}
-            Mais alors, on a d'une part que
+            Thus we have on the one hand, that
             \begin{equation*}\label{eq:proof-thm-controllability-45}
                 \normeohm{y_{\veps}^{v}\!\left({\cdot,T}\right)} < \veps
-                \quad\text{et}\quad
-                \begin{array}{rcllll}
-                    y_{\veps}^{v} & \longrightarrow & y^{v} & \text{dans} &
-                    \Vbb & \text{faible}
+                \quad\text{and}\quad
+                \begin{array}{rclll}
+                    y_{\veps}^{v} & \longrightarrow & y^{v} & \text{weakly
+                    in} & \Vbb
                 \end{array}
             \end{equation*}
-            entraînent, $y_{\veps}^{v}$ étant presque partout égale à une
-            fonction continue de $[0,T]$ dans $\Ldeux{\Omega}$, que
+            imply, $y_{\veps}^{v}$ being almost everywhere equal to a
+            continuous mapping from $(0,T)$ to $\Ldeux{\Omega}$, that
             \begin{equation}\label{eq:proof-thm-controllability-46}
                 \begin{array}{rclll}
-                    y^{v}\!\left({\cdot, T}\right) & = & 0 & \text{dans} &
+                    y^{v}\!\left({\cdot, T}\right) & = & 0 & \text{in} &
                     \Omega.
                 \end{array}
             \end{equation}
-            D'autre part, pour tout $\vphi\in\Cscr(Q)$, on a:
+            On the other hand, we have for any $\vphi\in\Cscr(Q)$ that:
             \begin{equation*}
                 \begin{split}
                     {} & \primetemps{y_{\veps}^{v}} - \Delta y_{\veps}^{v}
-                    = v\ \text{dans}\ Q \iff \scalaireq{%
+                    = v\ \text{in}\ Q \iff \scalaireq{%
                         \primetemps{y_{\veps}^{v}} - \Delta y_{\veps}^{v}
                     }{\vphi} = \scalaireq{v}{\vphi}\\
-                    % &\qquad \iff \scalaireohm{%
-                    %     \condfinale{y_{\veps}^{v}}
-                    % }{%
-                    %     \condfinale{\vphi}
-                    % } - \scalaireohm{%
-                    %     \condinitiale{y_{\veps}^{v}}
-                    % }{%
-                    %     \condinitiale{\vphi}
-                    % }\\
-                    % &\qquad\qquad - \scalaireq{%
-                    %     y_{\veps}^{v}
-                    % }{\primetemps{\vphi}} - \scalaireq{%
-                    %     y_{\veps}^{v}
-                    % }{%
-                    %     \Delta\vphi{}
-                    % } - \scalaires{%
-                    %     \deriveenormale{y_{\veps}^{v}}
-                    % }{%
-                    %     \vphi{}
-                    % }\\
-                    % &\qquad\qquad + \scalaires{%
-                    %     y_{\veps}^{v}
-                    % }{%
-                    %     \deriveenormale{\vphi}
-                    % } = \scalaireq{v}{\vphi}\\
                     &\qquad\iff \scalaireohm{%
                         \condfinale{y_{\veps}^{v}}
                     }{%
@@ -536,7 +496,7 @@ régulière à l'équation de la chaleur rétrograde.
                     &\qquad\qquad\qquad = \scalaireq{v}{\vphi},
                 \end{split}
             \end{equation*}
-            soit, par passage à la limite,
+            so, by passing to the limit,
             \begin{equation*}
                 \begin{split}
                     {} & \scalaireohm{%
@@ -577,55 +537,56 @@ régulière à l'équation de la chaleur rétrograde.
                     } = \scalaireq{v}{\vphi}.
                 \end{split}
             \end{equation*}
-            Cette dernière égalité valant pour tout $\vphi\in\Cscr(Q)$, il
-            en découle que
+            This last equality being valid for any $\vphi\in\Cscr(Q)$, it
+            follows that
             \begin{equation*}
                 \begin{cases}\displaystyle
                     \begin{array}{rclll}
                         \primetemps{y^{v}} - \Delta y^{v} & = & v &
-                        \text{dans} & Q,\\
+                        \text{in} & Q,\\
                         \\
-                        y^{v} & = & 0 & \text{sur} & \Sigma,\\
+                        y^{v} & = & 0 & \text{on} & \Sigma,\\
                         \\
-                        \condinitiale{y^{v}} & = & y_{0} & \text{dans} &
+                        \condinitiale{y^{v}} & = & y_{0} & \text{in} &
                         \Omega,
                     \end{array}
                 \end{cases}
             \end{equation*}
-            soit, avec~\eqref{eq:proof-thm-controllability-46}, que
+            which implies, with~\eqref{eq:proof-thm-controllability-46},
+            that
             \begin{equation*}
                 \begin{cases}\displaystyle
                     \begin{array}{rclll}
                         \primetemps{y^{v}} - \Delta y^{v} & = & v &
-                        \text{dans} & Q,\\
+                        \text{in} & Q,\\
                         \\
-                        y^{v} & = & 0 & \text{sur} & \Sigma,\\
+                        y^{v} & = & 0 & \text{on} & \Sigma,\\
                         \\
-                        \condfinale{y^{v}} & = & 0 & \text{dans} & \Omega,
+                        \condfinale{y^{v}} & = & 0 & \text{in} & \Omega,
                     \end{array}
                 \end{cases}
             \end{equation*}
-            c'est-à-dire que $y^{v}\in \Vbb$ est solution de l'équation de
-            la chaleur rétrograde~\eqref{eq:initial-problem-2}.
-        \item On suppose à présent que l'équation de la chaleur
-            rétrograde~\eqref{eq:initial-problem-2} admet une solution
-            régulière $z\in \Vbb$.
+            that is to say that $y^{v}\in \Vbb$ is solution of the
+            ill-posed backwards heat equation~\eqref{eq:initial-problem-2}.
+        \item Now, let assume that the ill-posed backwards heat
+            equation~\eqref{eq:initial-problem-2} admits a regular solution
+            $z\in \Vbb$.
 
-            Alors, comme $z\in \Vbb$ implique que $z$ est presque partout
-            égale à une fonction continue de $[0,T]$ dans $\Ldeux{\Omega}$,
-            on peut, après modification éventuelle sur un ensemble de
-            mesure nulle, parler de sa valeur initiale $\displaystyle
+            Then, since $z\in \Vbb$ implies that $z$ is almost everywhere
+            equal to a continuous function from $(0,T)$ to
+            $\Ldeux{\Omega}$, we can, after possible modification on a set
+            of zero measure, to speak of the initial value $\displaystyle
             \condinitiale{z}\in\Ldeux{\Omega}$.
 
-            Et donc, posant pour tout $\veps > 0$,
+            Then, by choosing, for any $\veps > 0$,
             \begin{equation*}
                 \begin{array}{rclll}
-                    {y_{0}}_{\veps} & = & \condinitiale{z} & \text{dans} &
+                    {y_{0}}_{\veps} & = & \condinitiale{z} & \text{in} &
                     \Omega,
                 \end{array}
             \end{equation*}
-            on obtient que la suite
-            ${\left({{y_{0}}_{\veps}}\right)}_{\veps}$, puisque constante,
-            est bornée dans $\Ldeux{\Omega}$.
+            we obtain that the sequence
+            ${\left({{y_{0}}_{\veps}}\right)}_{\veps}$, since constant, is
+            bounded in $\Ldeux{\Omega}$.
     \end{enumerate}
 \end{proof}

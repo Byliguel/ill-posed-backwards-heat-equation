@@ -118,7 +118,6 @@
       \field{title}{The ill-posed Cauchy problem by Controllability: the parabolic case}
       \field{volume}{2022}
       \field{year}{2022}
-      \true{nocite}
       \field{pages}{69\bibrangedash 88}
       \range{pages}{20}
     \endentry
@@ -180,7 +179,6 @@
       \field{title}{Control of the Hyperbolic Ill-posed Cauchy Problem by Controllability}
       \field{volume}{15}
       \field{year}{2023}
-      \true{nocite}
       \verb{doi}
       \verb 10.5539/jmr.v15n6p42
       \endverb

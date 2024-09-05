@@ -1,78 +1,78 @@
 \section{Introduction}
 
-On considère $\Omega$ un ouvert borné de ${\Rbb}^{n}$, de frontière
-${\Gamma}$ deux fois continûment différentiable avec $\Omega$ localement
-d'un seul côté de $\Gamma$; soit que $\bar{\Omega}$ est une variété à bord
-de classe ${\Cscr}^{2}$.
+Let us consider an open and bounded subset $\Omega$ of ${\Rbb}^{n}$, $n\in
+{\mathbb{N}}^{*}$, of boundary ${\Gamma}$, twice continuously
+differentiable, with $\Omega$ locally on one side only of $\Gamma$; that is
+to say that $\bar{\Omega}$ is a variety with a boundary of class
+${\Cscr}^{2}$.
 
-Pour $T > 0$, on note $\displaystyle Q = \Omega\times(0,T)$, $\displaystyle
-\Sigma = \Gamma\times (0,T)$, et $\displaystyle {\Uscr}_{ad}$ un
-sous-ensemble convexe fermé non vide de $\Ldeux{Q}$.
+For $T > 0$, we denote $\displaystyle Q = \Omega\times(0,T)$, $\displaystyle
+\Sigma = \Gamma\times (0,T)$, and $\displaystyle {\Uscr}_{ad}$ a closed and
+non-empty convex of $\Ldeux{Q}$.
 
-Étant donné $v\in\Ldeux{Q}$, on considère le problème
+For $v\in\Ldeux{Q}$, we on consider the following problem
 
 \begin{equation}\label{eq:initial-problem}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
-            \primetemps{z} - \Delta z & = & v & \text{dans} & Q,\\
+            \primetemps{z} - \Delta z & = & v & \text{in} & Q,\\
             \\
-            z & = & 0 & \text{sur} & \Sigma,\\
+            z & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condfinale{z} & = & 0 & \text{dans} & \Omega,
+            \condfinale{z} & = & 0 & \text{in} & \Omega,
         \end{array}
     \end{cases}
 \end{equation}
-étudiant l'évolution, dans le domaine $\Omega$ et à l'instant $t\in (0,T)$,
-de la chaleur (la température) $z$ connaissant la valeur de celle-ci à
-l'instant final $T$.
+being interested by the evolution, in $\Omega$ and at a time $t\in (0,T)$,
+of the temperature $z$ knowing its value at the final time $T$.
 
-Il est bien connu que le problème~\eqref{eq:initial-problem}, dit équation
-de la chaleur rétrograde, n'admet pas de solution pour des données
-initiales quelconques.
+It is well known that problem~\eqref{eq:initial-problem}, so called the
+ill-posed backwards heat equation, does not admits solution for any initial
+data.
 
-On considère donc a priori les couples $(v,z)\in
-{\left({\Ldeux{Q}}\right)}^{2}$ satisfaisant~\eqref{eq:initial-problem},
-disant de ceux-ci qu'ils constituent l'ensemble des couples contrôle-état.
+So we consider, a priori, pairs $(v,z)\in {\left({\Ldeux{Q}}\right)}^{2}$
+satisfying~\eqref{eq:initial-problem}, saying that such pairs constitute
+the set of control-state pairs.
 
-Un couple contrôle-état $(v,z)$ de~\eqref{eq:initial-problem} sera dit
-admissible si on a en plus
+A control-state pair $(v,z)$ for~\eqref{eq:initial-problem} will be said
+admissible if
 \begin{equation*}\label{eq:admissible-control-state-pair}
     v\in {\Uscr}_{ad};
 \end{equation*}
-on notera alors $(v,z)\in \Ascr$, désignant par $\Ascr$ l'ensemble des
-couples contrôle-état admissibles.
+and we will denote $(v,z)\in \Ascr$, designating by $\Ascr$ the set of
+optimal control-state pairs.
 
-Supposant que l'ensemble $\Ascr$ des couples contrôle-état admissibles est
-non vide, on introduit la fonctionnelle
+Supposing that the set $\Ascr$ of admissible control-state pairs is
+non-empty, we introduce the cost function
 \begin{equation*}\label{eq:initial-cost-function}
     J(v,z) = \dfrac{1}{2}\normecq{z - z_{d}} + \dfrac{N}{2}\normecq{v},
 \end{equation*}
-avec $z_{d}\in\Ldeux{Q}$ et $N > 0$.
+where $z_{d}\in\Ldeux{Q}$ and $N > 0$.
 
-On s'intéresse alors au problème de contrôle consistant à trouver un couple
-contrôle-état
+Then, we are interested in the control problem which consists in finding
+the control-state pair
 \begin{equation}\label{eq:initial-control-problem}
     (u,y)\in {\Ascr}_{ad}:\quad J(u,y) = \inf_{(v,z)\in
     {\Ascr}_{ad}}\,J(v,z).
 \end{equation}
 
-On a immédiatement le résultat suivant.
+The following result in then immediate
 \begin{theoreme}%
-    Le problème de contrôle optimal~\eqref{eq:initial-control-problem}
-    admet une solution unique $(u,y)$ appelée couple contrôle-état optimal.
+    The optimal control problem~\eqref{eq:initial-control-problem} admits a
+    unique solution $(u,y)$, called the optimal control-state pair.
 \end{theoreme}
 
 \begin{proof}%
-    De par sa structure, que la fonctionnelle $J$ est coercive, strictement
-    convexe et semi-continue inférieurement. Ce qui, avec l'hypothèse de
-    non vacuité du convexe fermé $\Ascr$ des couples contrôle-état
-    admissibles, permet bien de conclure à l'existence et l'unicité du
-    couple contrôle-état optimal $(u,y)$.
+    Due to its structure, the cost functional $J$ is coercive, strictly
+    convex and lower semi-continuous. From where, with the non-vacuity
+    assumption of the closed convex set of admissible control-state pairs
+    $\Ascr$, we can conclude to existence and unicity of the optimal
+    control-state pair $(u,y)$.
 \end{proof}
 
-Dès lors on établit (cf.~\cite{lions2}), avec la condition d'optimalité du
-premier ordre d'Euler-Lagrange, que le couple optimal $(u,y)$ est
-caractérisé par
+Hence, one can establish, (cf.~\cite{lions2}), using the first-order
+Euler-Lagrange optimality condition, that the optimal control-state pair
+$(u,y)$ is characterized by
 \begin{equation*}\label{eq:initial-variational-inequation}
     \begin{array}{rcl}
         \scalaireq{%
@@ -82,111 +82,109 @@ caractérisé par
         } + N\scalaireq{u}{v - u} & \geq & 0,\qquad \forall\,(v,z)\in\Ascr.
     \end{array}
 \end{equation*}
-Le problème consiste alors à trouver un système d'optimalité découplé
-caractérisant $(u,y)$.
+We now focus on the characterization of the optimal pair $(u,y)$ through a
+strong and decoupled singular optimality system.
 
-Une méthode classique en la matière est la méthode de pénalisation
-introduite par J.-L.~Lions dans~\cite{lions2}. Celle-ci consiste à
-approcher $(u,y)$ par un problème pénalisé. Plus précisément, pour $\veps >
-0$, on définit la fonction coût pénalisée
+A classic method to do so is the penalization method introduced by
+J.~L.~Lions in~\cite{lions2}. This one consists of approaching the optimal
+control-state pair $(u,y)$ by a penalized problem. More precisely, for
+$\veps > 0$, we define the penalized cost function
 \begin{equation*}\label{eq:penalized-cost-function}
     J_{\veps}\!\left({v,z}\right) = J(v,z) + \dfrac{1}{\veps}\normecq{%
         \primetemps{z} - \Delta z - v
     }.
 \end{equation*}
-On établit alors que le couple optimal $\left({u_{\veps},z_{\veps}}\right)$
-correspondant à cette nouvelle fonction coût converge vers le couple
-optimal $(u,y)$. On a donc un procédé d'approximation théorique du couple
-optimal $(u,y)$. À l'aide des conditions du premier ordre d'Euler-Lagrange,
-on caractérise le couple optimal approché
-$\left({u_{\veps},y_{\veps}}\right)$ par un système d'inégalités
-variationnelles qu'on interprète en un système d'optimalité approché après
-introduction de l'état adjoint approché
+We then establish that the optimal control-state pair
+$\left({u_{\veps},z_{\veps}}\right)$ corresponding to this last cost
+function converges towards the optimal control-state pair $(u,y)$. We
+therefore have a theoretical approximation process for the optimal pair
+$(u,y)$. Thanks to the first-order Euler-Lagrange optimality condition, we
+characterize the approached optimal control-state pair
+$\left({u_{\veps},y_{\veps}}\right)$ by a system of variational
+inequalities which we interpret as an approached optimality system after
+introducing the approached adjoint state
 \begin{equation*}
     p_{\veps} = -\dfrac{1}{\veps}\left({%
         \primetemps{y_{\veps}} - \Delta y_{\veps} - u_{\veps}
     }\right).
 \end{equation*}
-Le point essentiel de cette technique consiste en l'utilisation de la
-méthode des estimations \textit{a priori} pour l'obtention d'un système
-d'optimalité découplé fort par passage à la limite dans le système
-d'optimalité approché. Mais cette ultime étape requiert l'hypothèse de type
-Slater que
+The main step of this technique is the use of the \textit{a priori}
+estimation method to obtain a strongly decoupled optimality system by
+passing to the limit in the approached optimality system. But this final
+step requires the Slater-type assumption that
 \begin{equation}\label{eq:slater-type-assumption}
-    \text{“}{\Uscr}_{ad}\ \text{soit d'intérieur non vide dans}\
-    \Ldeux{Q}\text{”}.
+    \text{“the set of admissible controls }{\Uscr}_{ad}\ \text{is of non
+    empty interior in}\ \Ldeux{Q}\text{”}.
 \end{equation}
-Mais dans bien de situations, la condition de Slater n'est pas vérifiée; on
-peut citer en exemple le cas
+But in many situations, the Slater-type assumption does not hold; for
+example in the case
 \begin{equation*}
     \uad = {\left({\Ldeux{Q}}\right)}^{+} = \left\{{%
         v\in\Ldeux{Q}:\ v\geq 0
     }\right\}.
 \end{equation*}
-Il apparaît donc pertinent de savoir faire sans cette hypothèse très peu
-réaliste.
+It therefore appears relevant to know how to do without this unrealistic
+assumption.
 
-Pour ce faire, R.~Dorville, O.~Nakoulima et A.~Omrane proposent
-dans~\cite{dorville}, la notion de contrôle à moindres regrets, appliquée à
-une régularisée elliptique à données manquantes du
-problème~\eqref{eq:initial-problem}. Une approche qui leur permet de
-caractériser le contrôle à moindres regrets $u^{\gamma}$ via un système
-d'optimalité singulier découplé fort. Cela, certes sans recours à
-l'hypothèse~\eqref{eq:slater-type-assumption}, mais au détriment de la
-condition finale
+For this purpose,  R.~Dorville, O.~Nakoulima et A.~Omrane propose
+in~\cite{dorville}, the notion of least regrets control, applied to a
+regularized elliptic state equation with missing data. An approach that
+allows them to characterize the least regrets control $u^{\gamma}$ through
+a strongly decoupled singular optimality system. This, certainly without
+recourse to the Slater-type assumption~\eqref{eq:slater-type-assumption},
+but to the detriment of the final condition
 \begin{equation*}
     \begin{array}{rclll}
-        \condfinale{y^{\gamma}} & = & 0 & \text{dans} & \Omega,
+        \condfinale{y^{\gamma}} & = & 0 & \text{in} & \Omega.
     \end{array}
 \end{equation*}
-soit plus précisément que l'état associé au contrôle à moindres regrets
-$u^{\gamma}$ est alors tel qu'en toute généralité
+That is to say, more precisely, that the state $y^{\gamma}$ associated with
+the least regrets control $u^{\gamma}$ is such that, in all generality,
 \begin{equation*}
     \begin{array}{rclll}
-        \condfinale{y^{\gamma}} & \neq & 0 & \text{dans} & \Omega.
+        \condfinale{y^{\gamma}} & \neq & 0 & \text{in} & \Omega.
     \end{array}
 \end{equation*}
-Pour contourner le problème,
-les auteurs introduisent la notion de correcteur d'ordre $0$, laquelle
-appelle à l'hypothèse de régularité
+In response to this problem, the authors introduce the notion of zero-order
+corrector, which calls for the regularity assumption
 \begin{equation}\label{eq:dorvilleassumption}
     \condfinale{y^{\gamma}}\in H_{0}^{1}(\Omega):\
     \primetemps{y^{\gamma}}\in \Ldeux{Q}.
 \end{equation}
-Laquelle hypothèse permet d'obtenir la caractérisation ci-dessous précisé
-du couple contrôle-état optimal initial.
+This last one allows them to obtain the characterization specified below of
+the initial optimal control-state pair.
 
 \begin{theoreme}[cf.~\cite{dorville}]%
-    Le contrôle sans regret $u$ du
-    problème~\eqref{eq:initial-problem}\eqref{eq:initial-cost-function}\eqref{eq:initial-control-problem}
-    est caractérisé par l'unique $\left\{{u,y,\rho,p,\xi}\right\}$ solution
-    du système:
+    The no-regret control $u$ of the
+    problem~\eqref{eq:initial-problem}\eqref{eq:initial-cost-function}\eqref{eq:initial-control-problem}
+    is characterized by the unique $\left\{{u,y,\rho,p,\xi}\right\}$
+    solution of the system:
     \begin{equation}
         \begin{cases}\displaystyle
             \begin{array}{rclrclrclrclll}
                 Ly & = & u, & L\rho & = & 0, & L^{*}p & = & y - z_{d} +
-                \rho, & L^{*}\xi & = & y & \text{dans} & Q,\\
+                \rho, & L^{*}\xi & = & y & \text{in} & Q,\\
                 y & = & 0, & \rho & = & 0, & p & = & 0, & \xi & = & 0, &
-                \text{sur} & \Sigma,\\
+                \text{on} & \Sigma,\\
                 y(0) & = & 0, & \rho(0) & = & \lambda(0) & {} & {} & {} &
-                {} & {} & {} & \text{dans} & \Omega,\\
+                {} & {} & {} & \text{in} & \Omega,\\
                 {} & {} & {} & {} & {} & {} & p(T) & = & 0 & \xi(T) & = & 0
-                & \text{dans} & \Omega,
+                & \text{in} & \Omega,
             \end{array}
         \end{cases}
     \end{equation}
-    et on a l'inégalité variationnelle
+    and we have the variational inequality
     \begin{equation}
         \begin{array}{rcll}
             \scalaire{p + Nu}{v - u}{} & \geq & 0 & \forall\,v\in\uad,
         \end{array}
     \end{equation}
-    avec
+    with
     \begin{equation*}
         \left|{%
             \begin{array}{l}
-                L = \primetemps{} - \Delta\quad\text{et}\quad L^{*} =
-                -\primetemps{} - \Delta\quad\text{son opérateur adjoint};\\
+                L = \primetemps{} - \Delta\quad\text{and}\quad L^{*} =
+                -\primetemps{} - \Delta\quad\text{its adjoint operator};\\
                 u, y, p, \rho, \xi\in \Ldeux{]0,T[;\Ldeux{\Omega}},\quad
                 \lambda(0)\in\Ldeux{\Omega}.
             \end{array}
@@ -194,34 +192,36 @@ du couple contrôle-état optimal initial.
     \end{equation*}
 \end{theoreme}
 
-En définitive, le contrôle sans regret ainsi obtenu ne satisfait pas la
-condition finale
+Ultimately, the no-regret control thus obtained does not satisfy the final
+condition
 \begin{equation*}
     \begin{array}{rclll}
-        \condfinale{y} & = & 0 & \text{dans} & \Omega,
+        \condfinale{y} & = & 0 & \text{in} & \Omega,
     \end{array}
 \end{equation*}
-de sorte qu'en toute généralité le problème reste, du mieux de nos
-connaissances, globalement ouvert.
+so that, in all generality, the problem remains, to the best of our
+knowledge, globally open.
 
-Nous proposons à travers le présent article la méthode de contrôlabilité
-pour l'analyse, sans recours à
-l'hypothèse~\eqref{eq:slater-type-assumption}, du problème de contrôle de
-l'équation de la chaleur rétrograde. Notons que cette méthode a permis de
-proposer dans~\cite{ownElliptic}, puis~\cite{ownAAA}, une réponse à la même
-question du contrôle, sans recours à~\eqref{eq:slater-type-assumption}, de
-problèmes de contrôle du système de Cauchy mal posé pour opérateur
-elliptique.
+We propose in this paper the controllability method for the analysis,
+without recourse to the Slater-type
+assumption~\eqref{eq:slater-type-assumption}, of the control problem of the
+ill-posed backwards heat equation. Note that this method has made it
+possible to propose
+in~\cite{ownElliptic},~\cite{ownAAA},~\cite{ownParabolic}
+and~\cite{ownhyperbolic}, an answer to the same question of the control,
+without recourse to~\eqref{eq:slater-type-assumption}, of control problems
+of ill-posed Cauchy system for elliptic, parabolic and hyperbolic
+operators.
 
-La suite de cet article se présente comme suit. La
-Section~\ref{sec:controllability} est consacrée à l'interprétation annoncée
-du problème initial comme un problème inverse. On y définit le problème dit
-de contrôlabilité exacte que nous approchons, par argument de densité, par
-un problème équivalent (celui-ci dit de contrôlabilité approchée). Dans la
-Section~\ref{sec:controlproblem}, nous revenons au problème de
-contrôle~\eqref{eq:initial-control-problem}, commençant par le régulariser
-d'après les résultats de contrôlabilité précédemment obtenus. Après avoir
-établit la convergence du procédé dans la Section~\ref{sec:convergence},
-puis le système d'optimalité approché dans la
-Section~\ref{sec:approachedso}, nous finissons dans la
-Section~\ref{sec:singularso} par le système d'optimalité singulier.
+The rest of this article is as follows. Section~\ref{sec:controllability}
+is devoted to the announced interpretation of the initial problem as an
+inverse problem. We define there the so-called exact controllability
+problem which we approach, by density argument, by an equivalent problem
+(this one called the approached controllability problem). In
+Section~\ref{sec:controlproblem}, we return to the control
+problem~\eqref{eq:initial-control-problem}, starting by regularized it
+based on the controllability results previously obtained. After established
+the convergence of the process in Section~\ref{sec:convergence}, then the
+approached optimality system in Section~\ref{sec:approachedso}, we end in
+Section~\ref{sec:singularso} with the optimality system for the initial
+control problem.

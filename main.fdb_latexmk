@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1725241234.86952 "main.bcf" "main.bbl" "main" 1725242070.37833 0
-  "biblio.bib" 1725241233.41098 2721 c877cab4c8a06f0beb588457a13c5481 ""
-  "main.bcf" 1725242070.21316 108391 b4202fe75066998225323696b1d0b04d "pdflatex"
+["biber main"] 1725409548.99022 "main.bcf" "main.bbl" "main" 1725501142.3819 0
+  "biblio.bib" 1725242164.04731 2721 c877cab4c8a06f0beb588457a13c5481 ""
+  "main.bcf" 1725501142.19408 108528 7dfa3d81126f65ac7ce95305b0a3b008 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1725242069.11029 "main.tex" "main.pdf" "main" 1725242070.37874 0
+["pdflatex"] 1725501141.06435 "main.tex" "main.pdf" "main" 1725501142.38228 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -82,8 +82,11 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb" 1136849748 45955 6dfcb282cf470ceb18d57d017b7898d6 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf" 1496785618 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/babel-french/french.ldf" 1709241695 67734 26e5b5a8646364e31f616588e683938d ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty" 1707339808 146276 10a40dabec03ce18494af0c3a51bcbdc ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-en.ini" 1661803479 3966 caeee5a9e5771d4446aa1ca9015ba1b2 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.tex" 1498512262 336 ed676b5e7dfd862bc78d634f6a973f37 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/fr/babel-fr.ini" 1704662920 5918 0f6ad8bc9a16ae22ee21685f58ff516d ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/fr/babel-french.tex" 1704662920 2133 44b1afb9708604e2ff17e4a838a966b6 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def" 1704662920 6948 df63e25be1d2bc35bbad5a0141f41348 ""
@@ -129,6 +132,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-compat.def" 1643926307 13919 5426dbe90e723f089052b4e908b56ef9 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-dm.def" 1643926307 32455 8d3e554836db11aab80a8e11be62e1b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx" 1678141846 4629 cda468e8a0b1cfa0f61872e171037a4b ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx" 1643926307 39965 48ce9ce3350aba9457f1020b1deba5cf ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/french.lbx" 1643926307 35241 d39a5466e0a750d135eb3c495bfd20ca ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/carlisle/scalefnt.sty" 1137109962 1360 df2086bf924b14b72d6121fe9502fcdb ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg" 1429144587 7068 06f8d141725d114847527a66439066b6 ""
@@ -168,15 +172,15 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724213201.68497 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1724213250 8221467 e2e2235563183ff60f6051aecfa33526 ""
   "/usr/local/texlive/2024/texmf.cnf" 1724213196.34704 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "01-statement.tex" 1725241979.68441 9892 664cd2d93e230b613239b2342f849612 ""
-  "02-controllability.tex" 1725241608.09234 25476 a7de96713ad27e45581858eae66b6a4d ""
-  "03-the-control-problem.tex" 1725241781.22812 26662 e15782f1fab8387063b9d9d57c20e231 ""
-  "main.aux" 1725242070.21016 8074 17fc168c680aae5b2a14db47d16a664a "pdflatex"
-  "main.bbl" 1725241235.89686 9805 4c429047e0fbba0816dfbe67c9a7e98a "biber main"
-  "main.out" 1725242070.21216 1365 680eaa174a8437d77b134b8b2e3b7b83 "pdflatex"
-  "main.run.xml" 1725242070.21416 2300 66129b155c7b6e5e623a548f26c835dc "pdflatex"
-  "main.tex" 1725242065.77702 4949 3aec9c771a3f71cc05fa5a61e98ee0e1 ""
-  "shortcommands.sty" 1724175261.5147 13102 98a28c7bbe8d9c7ac60c420f430c2ad2 ""
+  "01-statement.tex" 1725500975.62868 9755 f5a3ef478586835d777e58ec70211d88 ""
+  "02-controllability.tex" 1725500823.94187 23853 86b9d0c42f58e74f1dcb0834a5201fd5 ""
+  "03-the-control-problem.tex" 1725500537.35496 25880 3b71ea7ff259b006e810c4a84d4c53ed ""
+  "main.aux" 1725501142.19008 8142 746f1c06057d6d21d5239112bd9cdf77 "pdflatex"
+  "main.bbl" 1725409553.84604 9765 0725fde523f202031aa15a8bbc4e87c8 "biber main"
+  "main.out" 1725501142.19308 1311 24431a04b5f2f53d60153a7f7f3ac449 "pdflatex"
+  "main.run.xml" 1725501142.19508 2331 7b6f215c97ed11c8ed2e5225ffcef24e "pdflatex"
+  "main.tex" 1725500642.08664 4556 3d2e11b837e321534d09d8fb20b4c7d3 ""
+  "shortcommands.sty" 1725242164.05231 13102 98a28c7bbe8d9c7ac60c420f430c2ad2 ""
   (generated)
   "main.aux"
   "main.bcf"

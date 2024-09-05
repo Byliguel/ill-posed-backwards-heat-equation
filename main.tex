@@ -21,7 +21,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[french]{babel}
+\usepackage[english,french]{babel}
 
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
@@ -34,12 +34,12 @@
 
 % \usepackage[notref,notcite]{showkeys}
 
-\newtheorem{definition}{Définition}
+\newtheorem{definition}{Definition}
 \newtheorem{proposition}{Proposition}
-\newtheorem{corollaire}{Corollaire}
-\newtheorem{lemme}{Lemme}
-\newtheorem{remarque}{Remarque}
-\newtheorem{theoreme}{Théorème}
+\newtheorem{corollaire}{Corollary}
+\newtheorem{lemme}{Lemma}
+\newtheorem{remarque}{Remark}
+\newtheorem{theoreme}{Theorem}
 
 \setlist[itemize,1]{label=\tiny\Pisymbol{pzd}{110}}
 \setlist[itemize,2]{label=\tiny$\blacktriangleright$}
@@ -65,7 +65,7 @@ Ill-Posed Backwards Heat Equation}
 
 \author[,1,2]{Bylli
 André~\textsc{Guel}\thanks{bylli.guel@uv.bf\,/\,01~BV~30770~Ouagadougou~01,~Burkina~Faso}}
-\affil[1]{Virtual University of Burkina Faso,\authorcr{} Ouagadougou,
+\affil[1]{Université Virtuelle du Burkina Faso,\authorcr{} Ouagadougou,
 Burkina~Faso}
 \affil[2]{Laboratoire d'Analyse Numérique, d'Informatique et de
 BIOmathématiques (LANIBIO), Burkina Faso}
@@ -78,24 +78,23 @@ Numérique (LMDAN), Sénégal}
 
 \begin{document}
 
+\selectlanguage{english}
+
 \parindent=0pt{}
 \parskip=6pt{}
 
 \maketitle{}
 
 \begin{abstract}
-    This paper deals with the ill-posed backwards heat equation.
-
-    Dans cet article, nous traitons du problème de contrôle de l'équation
-    de la chaleur rétrograde. Nous proposons, pour ce faire, la méthode
-    dite de contrôlabilité. Le point de vue adopté, consistant à
-    interpréter le problème initial comme un problème inverse, nous permet
-    d'obtenir un système d'optimalité singulier découplé fort pour le couple
-    contrôle-état optimal, mais aussi de proposer un critère d'existence
-    d'une solution régulière à l'équation de la chaleur rétrograde. Il
-    importe de noter que ces résultats sont obtenus sans recours à une
-    hypothèse de type Slater, hypothèse dont on avait du mal à se défaire
-    jusqu'alors.
+    This paper deals with the ill-posed backwards heat equation. To do
+    this, we propose the controllability method. The point of view adopted,
+    which consists in interpreting the state equation as an inverse problem,
+    allows us to obtain a decoupled and strong singular optimality system
+    for the optimal control-state pair, but also to propose an existence
+    criteria for a regular solution of the backwards heat equation. It is
+    important to note that this results are obtained without recourse to a
+    Slater-type assumption, an assumption to which many analyses have had
+    to recourse.
 
     \vspace{\baselineskip}
     \textbf{Keywords:} Singular distributed systems, Optimal control,
@@ -121,12 +120,7 @@ the following
 \begin{equation}
     (u,y):\quad \condinitiale{y}\in\Ldeux{\Omega}.
 \end{equation}
-% assumption that the optimal state $y$ of the system verified
-% $\condinitiale{y}\in\Ldeux{\Omega}$.
 
-% Beyond, the method here adopted makes
-% it possible to propose a characterization of the existence of a regular
-% solution to the ill-posed backwards heat equation.
 Finally, in view of the similar results obtained for the ill-posed Cauchy
 system for an elliptic operator (cf.~\cite{ownElliptic} and~\cite{ownAAA}),
 the controllability method here proposed seems relevant for control
