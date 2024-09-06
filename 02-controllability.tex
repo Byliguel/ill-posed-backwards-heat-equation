@@ -1,17 +1,17 @@
 \section{Controllability of the ill-posed backwards heat
 equation}\label{sec:controllability}
 
-In the present section, we introduce controllability viewpoint here
+In the present section, we introduce the controllability viewpoint here
 proposed. Which consists, starting from the notion of controllability
 introduced by J.-L.~Lions in~\cite[222]{lions1}, in interpreting the
 initial state equation as an inverse problem (we also say a controllability
 problem).
 
 We establish that, when it exists, the solution of the ill-posed backwards
-heat equation~\eqref{eq:initial-problem} is also, in the limit, a solution
-of the approached controllability problem. Which then makes it possible to
-establish a necessary and sufficient condition characterizing the existence
-of a regular solution to the problem~\eqref{eq:initial-problem}.
+heat equation~\eqref{eq:initial-problem} can be approximated by that of the
+approached controllability problem. Which implicitly allows us to propose a
+necessary and sufficient condition for the existence of a regular solution
+to the problem~\eqref{eq:initial-problem}.
 
 We therefore interpret~\eqref{eq:initial-problem} as an inverse problem
 whose observation objective consists in the final condition
@@ -52,7 +52,7 @@ then
 \end{equation}
 We say that~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3}
 constitutes an exact controllability problem associated with the ill-posed
-backward heat equation~\eqref{eq:initial-problem}.
+backwards heat equation~\eqref{eq:initial-problem}.
 
 \begin{remarque}%
     The controllability problem is well defined. Indeed, it is well known
@@ -63,8 +63,8 @@ backward heat equation~\eqref{eq:initial-problem}.
         y\!\left({v,y_{0}}\right)\in \Vbb := \Ldeux{0,T;
         H_{0}^{1}(\Omega)}\cap \Cscr\!\left({[0,T];\Ldeux{\Omega}}\right)
     \end{equation*}
-    which depends continuously on the data. We deduce from this that, after
-    possible modification on a set of zero measure, the solution
+    which depends continuously on the data. We deduce from this, after
+    possible modification on a set of zero measure, that the solution
     $y\!\left({v,y_{0}}\right)$ of~\eqref{eq:inverse-problem-2} merges with
     a continuous function from $(0,T)$ to $\Ldeux{\Omega}$.
 
@@ -106,14 +106,12 @@ backward heat equation~\eqref{eq:initial-problem}.
                 \end{cases}
             \end{equation}
     \end{itemize}
-    Then we have that the mapping
+    Then, the mapping
     \begin{equation*}
         \left({v,y_{0}}\right)\longmapsto y^{v} = y_{0}^{v} + y^{0},
     \end{equation*}
-    is linear and continuous from $\Ldeux{Q}\times \Ldeux{Q}$ to $\Vbb\subset
-    \Ldeux{Q}$.
-
-    We deduce that the exact controllability
+    being linear and continuous from $\Ldeux{Q}\times \Ldeux{Q}$ to
+    $\Vbb\subset \Ldeux{Q}$, we deduce that the exact controllability
     problem~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3} is
     equivalent to the following
     \begin{equation}\label{eq:inverse-problem-4}
@@ -212,7 +210,7 @@ by density argument as specified below.
             }{\vphi} = 0.
         \end{split}
     \end{equation}
-    Choosing $\vphi$, in the above, such that
+    Choosing in the above, $\vphi$ such that
     \begin{equation}\label{eq:controllability-proof-31}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
@@ -270,8 +268,8 @@ by density argument as specified below.
     \end{equation*}
     that is to say that $\vphi\equiv 0$ and consequently that
     \begin{equation*}
-        \begin{array}{rclll}
-            \vphi\!\left({\cdot,T}\right) & = & k = 0 & \text{in} &
+        \begin{array}{rclcll}
+            \vphi\!\left({\cdot,T}\right) & = & k & = 0 & \text{in} &
             \Omega.
         \end{array}
     \end{equation*}
@@ -288,7 +286,7 @@ The following result is then immediate.
     \begin{equation}\label{eq:controllability-result-3}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
-                \primetemps{y_{\veps}^{0}} - \Delta y_{\veps}^{0} & = & v &
+                \primetemps{y_{\veps}^{0}} - \Delta y_{\veps}^{0} & = & 0 &
                 \text{in} & Q,\\
                 \\
                 y_{\veps}^{0} & = & 0 & \text{on} & \Sigma,\\
@@ -420,13 +418,13 @@ regular solution to the ill-posed backwards heat equation.
                 \Ldeux{\Omega}\qquad\text{and}\qquad
                 {\left({y_{\veps}^{v}}\right)}_{\veps}\subset \Vbb.
             \end{equation*}
-            Assuming that the sequence
+            Let suppose that the sequence
             ${\left({{y_{0}}_{\veps}}\right)}_{\veps}$ is bounded in
-            $\Ldeux{\Omega}$. Therefore, it follows that, the homogeneous
+            $\Ldeux{\Omega}$. It therefore follows, the homogeneous
             Dirichlet problem~\eqref{eq:proof-thm-controllability-42} for
-            the heat equation being well-posed, the sequence
+            the heat equation being well-posed, that the sequence
             ${\left({y_{\veps}^{v}}\right)}_{\veps}$ is bounded in $\Vbb$,
-            and therefore also in $\Ldeux{Q}$.
+            and also in $\Ldeux{Q}$.
 
             So we can extract from
             ${\left({{y_{0}}_{\veps}}\right)}_{\veps}$ and
@@ -434,7 +432,7 @@ regular solution to the ill-posed backwards heat equation.
             denoted in the same way, which converge weakly in
             $\Ldeux{\Omega}$ and $\Vbb$, respectively.
 
-            So that, there exists $\displaystyle y_{0}\in \Ldeux{\Omega}$
+            So that, there exist $\displaystyle y_{0}\in \Ldeux{\Omega}$
             and $\displaystyle y^{v}\in \Vbb$, such as
             \begin{equation*}\label{eq:proof-thm-controllability-44}
                 \begin{cases}\displaystyle
@@ -464,7 +462,7 @@ regular solution to the ill-posed backwards heat equation.
                     \Omega.
                 \end{array}
             \end{equation}
-            On the other hand, we have for any $\vphi\in\Cscr(Q)$ that:
+            On the other hand, we have for any $\vphi\in\Dscr(Q)$ that:
             \begin{equation*}
                 \begin{split}
                     {} & \primetemps{y_{\veps}^{v}} - \Delta y_{\veps}^{v}
@@ -537,7 +535,7 @@ regular solution to the ill-posed backwards heat equation.
                     } = \scalaireq{v}{\vphi}.
                 \end{split}
             \end{equation*}
-            This last equality being valid for any $\vphi\in\Cscr(Q)$, it
+            This last equality being valid for any $\vphi\in\Dscr(Q)$, it
             follows that
             \begin{equation*}
                 \begin{cases}\displaystyle
@@ -575,7 +573,7 @@ regular solution to the ill-posed backwards heat equation.
             Then, since $z\in \Vbb$ implies that $z$ is almost everywhere
             equal to a continuous function from $(0,T)$ to
             $\Ldeux{\Omega}$, we can, after possible modification on a set
-            of zero measure, to speak of the initial value $\displaystyle
+            of zero measure, speak of the initial value $\displaystyle
             \condinitiale{z}\in\Ldeux{\Omega}$.
 
             Then, by choosing, for any $\veps > 0$,

@@ -24,10 +24,10 @@ pending:
 	latexmk -pdf $(FILE)
 
 last:
-	# latexmk -f -ps $(FILE)
-	# dvips $(FILE).dvi -o $(FILE).eps
-	# epstopdf $(FILE).ps --debug --outfile=$(OUT).pdf
-	cp $(FILE).pdf $(OUT).pdf
+	latexmk -f -ps $(FILE)
+	dvips $(FILE).dvi -o $(FILE).eps
+	epstopdf $(FILE).ps --debug --outfile=$(OUT).pdf
+	# cp $(FILE).pdf $(OUT).pdf
 	rm -f *.aux *.bbl *.blg *.toc *.log *.lot *.lof *.out *.dvi *.ps \
 		*.maf *mtc* *mlf* *mlt* *.idx *.pdfsync *tmp* *.ain *.ilg *.ind \
 		*.fdb_latexmk *.fls *.bcf *.eps *.run.xml

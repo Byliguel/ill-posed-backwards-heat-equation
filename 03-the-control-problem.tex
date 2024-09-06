@@ -14,11 +14,11 @@ precisely, that for $v,z\in \Ldeux{Q}$ satisfying
         \end{array}
     \end{cases}
 \end{equation}
-on pose
+we introduce the cost function
 \begin{equation}\label{eq:control81}
     J(v,z) = \dfrac{1}{2}\normecq{z - z_{d}} + \dfrac{N}{2}\normecq{v},
 \end{equation}
-s'intéressant au problème de contrôle
+being interested in the control problem
 \begin{equation}\label{eq:control82}
     \inf\!\left\{{%
         J(v,z);\ (v,z)\in\Ascr
@@ -34,7 +34,7 @@ objective.
 
 To do so, starting from the non-vacuity assumption of the set of admissible
 control-state pairs, and using the results previously obtained, we have for
-any $v\in\Ldeux{Q}$ and $\veps > 0$ that there exists
+any $v\in\Ldeux{Q}$ and $\veps > 0$ that there exist
 \begin{equation*}
     {y_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{and}\qquad y_{\veps}^{v}\in
     \Vbb
@@ -68,7 +68,7 @@ functional
     \dfrac{N}{2}\normecq{v} + \dfrac{1}{2\veps}\normecohm{{y_{0}}_{\veps} -
     \condinitiale{y}},
 \end{equation*}
-begin interested in the control problem
+being interested in the control problem
 \begin{equation}\label{eq:control87}
     \inf\!\left\{{%
         J_{\veps}(v);\ v\in\uad
@@ -116,13 +116,13 @@ In particular
 \begin{equation}\label{eq:control92}
     J_{\veps}\!\left({\bareps{u}}\right) \leq J_{\veps}(u),
 \end{equation}
-where $u$ is the optimal control-state pair
-of~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
+where $u$ is the optimal control
+for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}.
 
 We have in fact that $J_{\veps}(u)$ is independant of $\veps$. Indeed,
 since the optimal state $y$ associated with the optimal control $u$
-satisfies $\condinitiale{y}\in\Ldeux{\Omega}$, we obtain by posing
-${y_{0}^{*}}_{\veps} = \condinitiale{y}$ that $y$ satisfies
+satisfies $\condinitiale{y}\in\Ldeux{\Omega}$, we can take
+${y_{0}^{*}}_{\veps} = \condinitiale{y}$ to obtain that $y$ satisfies
 \begin{equation*}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
@@ -158,7 +158,7 @@ Hence~\eqref{eq:control92} becomes
 \begin{equation}\label{eq:control95}
     J_{\veps}\!\left({\bareps{u}}\right) \leq J_{\veps}(u) = J(u,y),
 \end{equation}
-and it follows that there exists constants $C_{i}\in{\Rbb}^{*}$ independant
+and it follows that there exist constants $C_{i}\in{\Rbb}^{*}$ independant
 of $\veps$ such as
 \begin{equation*}
     \normeq{\bareps{y}} \leq C_{1},\qquad
@@ -193,7 +193,7 @@ which leads, since
 to
 \begin{equation}\label{eq:control107}
     \begin{array}{rclll}
-        {\hat{y}}_{0} & = & \condinitiale{y} & \text{strongly in} & \Omega.
+        {\hat{y}}_{0} & = & \condinitiale{y} & \text{in} & \Omega.
     \end{array}
 \end{equation}
 Then it comes, with~\eqref{eq:control89}, that for any $\vphi\in\Dscr(Q)$,
@@ -334,12 +334,12 @@ $\hat{y}\in\Ldeux{Q}$ satisfies
             \\
             \hat{y} & = & 0 & \text{on} & \Sigma,\\
             \\
-            \condfinale{\hat{y}} & = & 0 & \text{in} & \Omega,
+            \condfinale{\hat{y}} & = & 0 & \text{in} & \Omega.
         \end{array}
     \end{cases}
 \end{equation*}
-noting that $\hat{u}\in\uad$, since $\bareps{u}\in\uad$ and $\uad$ is
-closed and therefore weakly closed: the control-state pair
+Then, noting that $\hat{u}\in\uad$, since $\bareps{u}\in\uad$ and $\uad$ is
+closed and therefore weakly closed, we get that the control-state pair
 $\left({\hat{u},\hat{y}}\right)$ is admissible
 for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}, so that
 \begin{equation}\label{eq:control105}
@@ -393,7 +393,7 @@ We establish below that we actually have more: the strong convergence.
 \end{theoreme}
 
 \begin{proof}%
-    From the results previously obtained above, we have that
+    From the results previously obtained, we have that
     \begin{equation}\label{eq:control112}
         \begin{array}{rclll}
             \bareps{u} & \longrightarrow & u & \text{weakly in} & \Ldeux{Q},
@@ -462,13 +462,13 @@ We establish below that we actually have more: the strong convergence.
             \bareps{u} & \longrightarrow & u & \text{weakly in} & \Ldeux{Q},
         \end{array}
     \end{equation*}
-    which ends proving the announced result.
+    which ends up proving the announced result.
 \end{proof}
 
 \subsection{Approached optimality system}\label{sec:approachedso}
 
-Let $\veps > 0$. Let us start by recalling that we have, for the control
-$\bareps{u}\in\uad$, optimal solution of~\eqref{eq:control87}, there exists
+Let us start by recalling that, for any $\veps > 0$ and for the optimal
+control $\bareps{u}\in\uad$, we have the existence of
 \begin{equation*}
     {\bar{y}_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{and}\qquad
     \bareps{y}\in\Ldeux{Q},
@@ -556,9 +556,9 @@ y\!\left({0, {\bar{y}_{0}}_{\veps}}\right)$ is defined by
         \end{array}
     \end{cases}
 \end{equation}
-Hence, we obtain with the first-ordre optimality condition of
-Euler-Lagrange that the approached optimal control $\bareps{u}$ is the
-unique element of $\uad$ satisfying
+Hence, with the first-order optimality condition of Euler-Lagrange, we
+obtain that the approached optimal control $\bareps{u}$ is the unique
+element of $\uad$ satisfying
 \begin{equation}\label{eq:control126}
     \scalaireq{%
         \bareps{y} - z_{d}
@@ -737,7 +737,7 @@ it follows that there exists $p\in\Ldeux{Q}$ such that
 \end{equation*}
 Then, we easily pass the results of Theorem~\ref{thm:soapproche} to the
 limit, when $\veps\to 0$, to obtain that the strong singular optimaly
-system charcaterizing the optimal control-state pair
+system characterizing the optimal control-state pair
 of~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} is as
 specified below.
 

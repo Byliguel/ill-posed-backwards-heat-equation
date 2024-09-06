@@ -10,7 +10,7 @@ For $T > 0$, we denote $\displaystyle Q = \Omega\times(0,T)$, $\displaystyle
 \Sigma = \Gamma\times (0,T)$, and $\displaystyle {\Uscr}_{ad}$ a closed and
 non-empty convex of $\Ldeux{Q}$.
 
-For $v\in\Ldeux{Q}$, we on consider the following problem
+Given $v\in\Ldeux{Q}$, we consider the following problem
 
 \begin{equation}\label{eq:initial-problem}
     \begin{cases}\displaystyle
@@ -23,12 +23,12 @@ For $v\in\Ldeux{Q}$, we on consider the following problem
         \end{array}
     \end{cases}
 \end{equation}
-being interested by the evolution, in $\Omega$ and at a time $t\in (0,T)$,
-of the temperature $z$ knowing its value at the final time $T$.
+being interested in the evolution, in $\Omega$ and at a time $t\in (0,T)$,
+of the temperature $z$, the value of which is kwnown at the final time $T$.
 
 It is well known that problem~\eqref{eq:initial-problem}, so called the
 ill-posed backwards heat equation, does not admits solution for any initial
-data.
+data $v\in\Ldeux{Q}$.
 
 So we consider, a priori, pairs $(v,z)\in {\left({\Ldeux{Q}}\right)}^{2}$
 satisfying~\eqref{eq:initial-problem}, saying that such pairs constitute
@@ -40,10 +40,9 @@ admissible if
     v\in {\Uscr}_{ad};
 \end{equation*}
 and we will denote $(v,z)\in \Ascr$, designating by $\Ascr$ the set of
-optimal control-state pairs.
+admissible control-state pairs.
 
-Supposing that the set $\Ascr$ of admissible control-state pairs is
-non-empty, we introduce the cost function
+Supposing that the set $\Ascr$ is non-empty, we introduce the cost function
 \begin{equation*}\label{eq:initial-cost-function}
     J(v,z) = \dfrac{1}{2}\normecq{z - z_{d}} + \dfrac{N}{2}\normecq{v},
 \end{equation*}
@@ -63,11 +62,11 @@ The following result in then immediate
 \end{theoreme}
 
 \begin{proof}%
-    Due to its structure, the cost functional $J$ is coercive, strictly
-    convex and lower semi-continuous. From where, with the non-vacuity
-    assumption of the closed convex set of admissible control-state pairs
-    $\Ascr$, we can conclude to existence and unicity of the optimal
-    control-state pair $(u,y)$.
+    Due to its structure, the cost functional $J$ is clearly coercive,
+    strictly convex and lower semi-continuous. From where, with the
+    non-vacuity assumption of the closed convex set of admissible
+    control-state pairs $\Ascr$, we can conclude to existence and unicity
+    of the optimal control-state pair $(u,y)$.
 \end{proof}
 
 Hence, one can establish, (cf.~\cite{lions2}), using the first-order
@@ -126,7 +125,7 @@ example in the case
 It therefore appears relevant to know how to do without this unrealistic
 assumption.
 
-For this purpose,  R.~Dorville, O.~Nakoulima et A.~Omrane propose
+For this purpose,  R.~Dorville, O.~Nakoulima and A.~Omrane propose
 in~\cite{dorville}, the notion of least regrets control, applied to a
 regularized elliptic state equation with missing data. An approach that
 allows them to characterize the least regrets control $u^{\gamma}$ through
@@ -213,7 +212,7 @@ without recourse to~\eqref{eq:slater-type-assumption}, of control problems
 of ill-posed Cauchy system for elliptic, parabolic and hyperbolic
 operators.
 
-The rest of this article is as follows. Section~\ref{sec:controllability}
+The rest of this paper is as follows. Section~\ref{sec:controllability}
 is devoted to the announced interpretation of the initial problem as an
 inverse problem. We define there the so-called exact controllability
 problem which we approach, by density argument, by an equivalent problem
