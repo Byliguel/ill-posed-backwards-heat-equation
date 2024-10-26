@@ -43,19 +43,18 @@ and we will denote $(v,z)\in \Ascr$, designating by $\Ascr$ the set of
 admissible control-state pairs.
 
 Supposing that the set $\Ascr$ is non-empty, we introduce the cost function
-\begin{equation*}\label{eq:initial-cost-function}
+\begin{equation}\label{eq:initial-cost-function}
     J(v,z) = \dfrac{1}{2}\normecq{z - z_{d}} + \dfrac{N}{2}\normecq{v},
-\end{equation*}
+\end{equation}
 where $z_{d}\in\Ldeux{Q}$ and $N > 0$.
 
 Then, we are interested in the control problem which consists in finding
 the control-state pair
 \begin{equation}\label{eq:initial-control-problem}
-    (u,y)\in {\Ascr}_{ad}:\quad J(u,y) = \inf_{(v,z)\in
-    {\Ascr}_{ad}}\,J(v,z).
+    (u,y)\in\Ascr:\quad J(u,y) = \inf_{(v,z)\in \Ascr}\,J(v,z).
 \end{equation}
 
-The following result in then immediate
+Then, the following result is immediate
 \begin{theoreme}%
     The optimal control problem~\eqref{eq:initial-control-problem} admits a
     unique solution $(u,y)$, called the optimal control-state pair.
@@ -129,7 +128,7 @@ For this purpose,  R.~Dorville, O.~Nakoulima and A.~Omrane propose
 in~\cite{dorville}, the notion of least regrets control, applied to a
 regularized elliptic state equation with missing data. An approach that
 allows them to characterize the least regrets control $u^{\gamma}$ through
-a strongly decoupled singular optimality system. This, certainly without
+a strong and decoupled singular optimality system. This, certainly without
 recourse to the Slater-type assumption~\eqref{eq:slater-type-assumption},
 but to the detriment of the final condition
 \begin{equation*}
@@ -150,8 +149,8 @@ corrector, which calls for the regularity assumption
     \condfinale{y^{\gamma}}\in H_{0}^{1}(\Omega):\
     \primetemps{y^{\gamma}}\in \Ldeux{Q}.
 \end{equation}
-This last one allows them to obtain the characterization specified below of
-the initial optimal control-state pair.
+This last one allows them to obtain the characterization, specified below,
+of the initial optimal control-state pair.
 
 \begin{theoreme}[cf.~\cite{dorville}]%
     The no-regret control $u$ of the
@@ -208,9 +207,8 @@ ill-posed backwards heat equation. Note that this method has made it
 possible to propose
 in~\cite{ownElliptic},~\cite{ownAAA},~\cite{ownParabolic}
 and~\cite{ownhyperbolic}, an answer to the same question of the control,
-without recourse to~\eqref{eq:slater-type-assumption}, of control problems
-of ill-posed Cauchy system for elliptic, parabolic and hyperbolic
-operators.
+without recourse to~\eqref{eq:slater-type-assumption}, of ill-posed Cauchy
+system for elliptic, parabolic and hyperbolic operators.
 
 The rest of this paper is as follows. Section~\ref{sec:controllability}
 is devoted to the announced interpretation of the initial problem as an

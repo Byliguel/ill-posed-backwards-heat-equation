@@ -51,7 +51,7 @@ then
     \end{array}
 \end{equation}
 We say that~\eqref{eq:inverse-problem-2}\eqref{eq:inverse-problem-3}
-constitutes an exact controllability problem associated with the ill-posed
+constitute an exact controllability problem associated with the ill-posed
 backwards heat equation~\eqref{eq:initial-problem}.
 
 \begin{remarque}%
@@ -60,8 +60,8 @@ backwards heat equation~\eqref{eq:initial-problem}.
     $y_{0}\in\Ldeux{\Omega}$,~\eqref{eq:inverse-problem-2} is well posed in
     the sense of Hadamard. That is to say that its admits a unique solution
     \begin{equation*}\label{eq:well-posedness-heat-equation}
-        y\!\left({v,y_{0}}\right)\in \Vbb := \Ldeux{0,T;
-        H_{0}^{1}(\Omega)}\cap \Cscr\!\left({[0,T];\Ldeux{\Omega}}\right)
+        y\!\left({v,y_{0}}\right)\in \Vbb :=
+        \Cscr\!\left({[0,T];\Ldeux{\Omega}}\right)
     \end{equation*}
     which depends continuously on the data. We deduce from this, after
     possible modification on a set of zero measure, that the solution
@@ -494,7 +494,8 @@ regular solution to the ill-posed backwards heat equation.
                     &\qquad\qquad\qquad = \scalaireq{v}{\vphi},
                 \end{split}
             \end{equation*}
-            so, by passing to the limit,
+            so, by passing to the limit, with the continuity of the zero
+            and one order trace operators,
             \begin{equation*}
                 \begin{split}
                     {} & \scalaireohm{%

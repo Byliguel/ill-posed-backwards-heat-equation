@@ -1,8 +1,8 @@
 \section{The optimal control problem}\label{sec:controlproblem}
 
 Let us start by recalling that we are here interested in the control
-problem of the ill-posed backwards heat equation. That is to say, more
-precisely, that for $v,z\in \Ldeux{Q}$ satisfying
+problem of the ill-posed backwards heat equation. More precisely, that is
+to say that, for $v,z\in \Ldeux{Q}$ satisfying
 \begin{equation}\label{eq:control80}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
@@ -33,8 +33,8 @@ Slater-type assumption~\eqref{eq:slater-type-assumption}, is the main
 objective.
 
 To do so, starting from the non-vacuity assumption of the set of admissible
-control-state pairs, and using the results previously obtained, we have for
-any $v\in\Ldeux{Q}$ and $\veps > 0$ that there exist
+control-state pairs, and using the results previously obtained, we have
+that, for any $v\in\Ldeux{Q}$ and $\veps > 0$, there exist
 \begin{equation*}
     {y_{0}}_{\veps}\in\Ldeux{\Omega}\qquad\text{and}\qquad y_{\veps}^{v}\in
     \Vbb
@@ -158,8 +158,8 @@ Hence~\eqref{eq:control92} becomes
 \begin{equation}\label{eq:control95}
     J_{\veps}\!\left({\bareps{u}}\right) \leq J_{\veps}(u) = J(u,y),
 \end{equation}
-and it follows that there exist constants $C_{i}\in{\Rbb}^{*}$ independant
-of $\veps$ such as
+and it follows that there exist constants $C_{i}\in{\Rbb}_{+}^{*}$
+independant of $\veps$ such as
 \begin{equation*}
     \normeq{\bareps{y}} \leq C_{1},\qquad
     \normeq{\bareps{u}}\leq C_{2}\qquad\text{and}\qquad
@@ -355,8 +355,8 @@ that $\left({\hat{u},\hat{y}}\right) = (u,y)$, which ends up proving the
 following result.
 
 \begin{proposition}%
-    For any $\veps > 0$, the approach optimal control $\bareps{u}$ and the
-    associated state $\bareps{y}$ satisfy
+    For any $\veps > 0$, the approached optimal control $\bareps{u}$ and
+    the associated state $\bareps{y}$ satisfy
     \begin{equation*}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
@@ -375,8 +375,8 @@ following result.
 We establish below that we actually have more: the strong convergence.
 
 \begin{theoreme}%
-    For any $\veps > 0$, the approach optimal control $\bareps{u}$ and the
-    associated state $\bareps{y}$ are such that, when $\veps \to 0$,
+    For any $\veps > 0$, the approached optimal control $\bareps{u}$ and
+    the associated state $\bareps{y}$ are such that, when $\veps \to 0$,
     \begin{equation*}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
@@ -413,7 +413,8 @@ We establish below that we actually have more: the strong convergence.
     and~\eqref{eq:control107}, the last equality above can still be written
     \begin{equation}\label{eq:control115}
         \normecq{y - z_{d}} + N\normecq{u} = \lim_{\veps\to 0}\left({%
-            \normecq{\bareps{y} - z_{d}} + N\normecq{\bareps{u}}
+            \normecq{\bareps{y} - z_{d}} + N\normecq{\bareps{u}} +
+            \dfrac{1}{\veps}\normecq{\bareps{y} - \condinitiale{y}}
         }\right).
     \end{equation}
     But then, the norm $\normeq{\cdot}$ being continous, \textit{a
@@ -459,7 +460,8 @@ We establish below that we actually have more: the strong convergence.
     to
     \begin{equation*}
         \begin{array}{rclll}
-            \bareps{u} & \longrightarrow & u & \text{weakly in} & \Ldeux{Q},
+            \bareps{u} & \longrightarrow & u & \text{strongly in} &
+            \Ldeux{Q},
         \end{array}
     \end{equation*}
     which ends up proving the announced result.
