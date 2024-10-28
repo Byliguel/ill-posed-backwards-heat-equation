@@ -13,26 +13,16 @@ approached controllability problem. Which implicitly allows us to propose a
 necessary and sufficient condition for the existence of a regular solution
 to the problem~\eqref{eq:initial-problem}.
 
-We therefore interpret~\eqref{eq:initial-problem} as an inverse problem
-whose observation objective consists in the final condition
-\begin{equation*}
-    \begin{array}{rclll}
-        \condfinale{z} & = & 0 & \text{in} & \Omega.
-    \end{array}
-\end{equation*}
+% We therefore interpret~\eqref{eq:initial-problem} as an inverse problem
+% whose observation objective consists in the final condition
+% \begin{equation*}
+%     \begin{array}{rclll}
+%         \condfinale{z} & = & 0 & \text{in} & \Omega.
+%     \end{array}
+% \end{equation*}
 
-More precisely, we consider the following problem
-\begin{equation*}\label{eq:inverse-problem-1}
-    \begin{cases}\displaystyle
-        \begin{array}{rclll}
-            \primetemps{y} - \Delta y & = & v & \text{in} & Q,\\
-            \\
-            y & = & 0 & \text{on} & \Sigma,
-        \end{array}
-    \end{cases}
-\end{equation*}
-posing the problem of finding $\displaystyle y_{0}\in\Ldeux{\Omega}$ such
-that if
+More precisely, we consider the problem of finding $\displaystyle
+y_{0}\in\Ldeux{\Omega}$ such that if
 \begin{equation}\label{eq:inverse-problem-2}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
@@ -60,8 +50,9 @@ backwards heat equation~\eqref{eq:initial-problem}.
     $y_{0}\in\Ldeux{\Omega}$,~\eqref{eq:inverse-problem-2} is well posed in
     the sense of Hadamard. That is to say that its admits a unique solution
     \begin{equation*}\label{eq:well-posedness-heat-equation}
-        y\!\left({v,y_{0}}\right)\in \Vbb :=
-        \Cscr\!\left({[0,T];\Ldeux{\Omega}}\right)
+        y\!\left({v,y_{0}}\right)\in \Vbb := \Ldeux{%
+            \left]{0,T}\right[; H_{0}^{1}(\Omega)
+        }\cap \Cscr\!\left({[0,T];\Ldeux{\Omega}}\right)
     \end{equation*}
     which depends continuously on the data. We deduce from this, after
     possible modification on a set of zero measure, that the solution
@@ -136,8 +127,9 @@ backwards heat equation~\eqref{eq:initial-problem}.
 %     qui est non vide et non seulement $\Ascr$.
 % \end{remarque}
 
-We approach the exact controllability problem~\eqref{eq:inverse-problem-4}
-by density argument as specified below.
+With this last remark, we start by approaching the exact controllability
+problem~\eqref{eq:inverse-problem-4} by density argument as specified
+below.
 
 \begin{proposition}\label{propo:controllability-result-1}%
     When the initial data $y_{0}$ traverses $\Ldeux{\Omega}$, the set
@@ -187,12 +179,13 @@ by density argument as specified below.
     \end{equation*}
     \ie{}
     \begin{equation}\label{eq:controllability-proof-30}
-        \begin{split}
+        % \begin{split}
             \scalaireohm{%
                 y^{0}\!\left({\cdot,T}\right)
             }{%
                 \vphi\!\left({\cdot,T}\right)
-            } &- \scalaireohm{%
+            }% &
+            - \scalaireohm{%
                 y_{0}
             }{%
                 \vphi\!\left({\cdot,0}\right)
@@ -200,23 +193,22 @@ by density argument as specified below.
                 y^{0}
             }{%
                 \primetemps{\vphi}
-            }\\
-            &\qquad - \scalaireq{%
+            }%\\
+            %&\qquad
+            - \scalaireq{%
                 y^{0}
             }{%
                 \Delta\vphi
-            } - \scalaires{%
-                \deriveenormale{y^{0}}
-            }{\vphi} = 0.
-        \end{split}
+            } = 0.
+        % \end{split}
     \end{equation}
-    Choosing in the above, $\vphi$ such that
+    Choosing in~\eqref{eq:controllability-proof-30}, $\vphi$ such that
     \begin{equation}\label{eq:controllability-proof-31}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
                 -\primetemps{\vphi} - \Delta\vphi & = & 0 & \text{in} & Q,\\
-                \\
-                \vphi & = & 0 & \text{on} & \Sigma,\\
+                % \\
+                % \vphi & = & 0 & \text{on} & \Sigma,\\
                 \\
                 \vphi\!\left({\cdot,T}\right) & = & k & \text{in} &
                 \Omega,
@@ -281,8 +273,8 @@ The following result is then immediate.
 
 \begin{corollaire}\label{coro:controllability-result-2}%
     For any $\veps > 0$ and $\kappa\in\Ldeux{\Omega}$, there exists
-    ${y_{0}}_{\veps}\in\Ldeux{\Omega}$ such that the solution $\displaystyle
-    y_{\veps}^{0}\in \Vbb$ of
+    ${y_{0}}_{\veps}\in\Ldeux{\Omega}$ such that the unique solution
+    $\displaystyle y_{\veps}^{0}\in \Vbb$ of
     \begin{equation}\label{eq:controllability-result-3}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
@@ -297,17 +289,27 @@ The following result is then immediate.
         \end{cases}
     \end{equation}
     also satisfies
-    \begin{equation*}\label{eq:controllability-result-4}
+    \begin{equation}\label{eq:controllability-result-4}
         \normeohm{y_{\veps}^{0}\!\left({\cdot,T}\right) - \kappa} < \veps.
-    \end{equation*}
+    \end{equation}
 \end{corollaire}
 
-From which it also follows that
+\begin{proof}%
+    Indeed, due to the density of the set $\displaystyle E = \left\{{%
+        y^{0}\!\left({\cdot,T}\right)\,;\ y_{0}\in \Ldeux{\Omega}
+    }\right\}$ in $\Ldeux{\Omega}$, it comes that for any target
+    $\kappa\in\Ldeux{\Omega}$, we can find ${y_{0}}_{\veps}\in
+    \Ldeux{\Omega}$ such that the final value of the solution
+    $\displaystyle {y_{0}}_{\veps}$ of~\eqref{eq:controllability-result-3}
+    approaches $\kappa$ to $\veps$ close. From where the result.
+\end{proof}
+
+It also follows, from the above, the result below.
 
 \begin{corollaire}\label{coro:controllability-result-3}%
     Given $v\in\Ldeux{Q}$ and $\veps > 0$, there exists ${y_{0}}_{\veps}\in
-    \Ldeux{\Omega}$ such that the solution $\displaystyle y_{\veps}^{v}\in
-    \Vbb$ of
+    \Ldeux{\Omega}$ such that the unique solution $\displaystyle
+    y_{\veps}^{v}\in \Vbb$ of
     \begin{equation}\label{eq:controllability-result-5}
         \begin{cases}\displaystyle
             \begin{array}{rclll}
@@ -322,9 +324,9 @@ From which it also follows that
         \end{cases}
     \end{equation}
     satisfies
-    \begin{equation*}\label{eq:controllability-result-6}
+    \begin{equation}\label{eq:controllability-result-6}
         \normeohm{y_{\veps}^{v}\!\left({\cdot,T}\right)} < \veps.
-    \end{equation*}
+    \end{equation}
 \end{corollaire}
 
 \begin{proof}%
@@ -344,7 +346,7 @@ From which it also follows that
             \end{array}
         \end{cases}
     \end{equation*}
-    It follows that, with Corollary~\ref{coro:controllability-result-2},
+    So it follows from Corollary~\ref{coro:controllability-result-2} that
     there exists ${y_{0}}_{\veps}\in\Ldeux{\Omega}$ such that the solution
     $y_{\veps}^{0}\in \Vbb$ of~\eqref{eq:controllability-result-3}
     satisfies
@@ -359,7 +361,7 @@ From which it also follows that
     \left({%
         y_{0}^{v} + y_{\veps}^{0}
     }\right) \in \Vbb$ is unique solution
-    of~\eqref{eq:controllability-result-5}, with
+    of~\eqref{eq:controllability-result-5}, with the estimate
     \begin{equation*}
         \normeohm{y_{\veps}^{v}\!\left({\cdot,T}\right)} = \normeohm{%
             y_{0}^{\veps}\!\left({\cdot,T}\right) +
@@ -368,7 +370,7 @@ From which it also follows that
     \end{equation*}
 \end{proof}
 
-More over, we have the following theorem, characterizing the existence of a
+Furthermore, we manage to characterize, as stated below, the existence of a
 regular solution to the ill-posed backwards heat equation.
 
 \begin{theoreme}\label{thm:controllability-result-5}%
@@ -385,15 +387,16 @@ regular solution to the ill-posed backwards heat equation.
         \end{cases}
     \end{equation}
     admits a regular solution $z\in \Vbb$ if and only if the sequence
-    $\displaystyle {\left({{y_{0}}_{\veps}}\right)}_{\veps}$ is bounded in
+    $\displaystyle {\left({{y_{0}}_{\veps}}\right)}_{\veps}$, given
+    by~Corollary~\ref{coro:controllability-result-3}, is bounded in
     $\Ldeux{\Omega}$.
 \end{theoreme}
 
 \begin{proof}%
     \begin{enumerate}
         \item Let $\veps > 0$. From
-            Corollary~\ref{coro:controllability-result-2}, there exists
-            ${y_{0}}_{\veps}\in \Ldeux{\Omega}$ such as $\displaystyle
+            Corollary~\ref{coro:controllability-result-3}, there exists
+            ${y_{0}}_{\veps}\in \Ldeux{\Omega}$ such that $\displaystyle
             y_{\veps}^{v}\in \Vbb$ is solution of
             \begin{equation}\label{eq:proof-thm-controllability-42}
                 \begin{cases}\displaystyle
@@ -409,9 +412,9 @@ regular solution to the ill-posed backwards heat equation.
                 \end{cases}
             \end{equation}
             with the estimate
-            \begin{equation*}\label{eq:proof-thm-controllability-43}
+            \begin{equation}\label{eq:proof-thm-controllability-43}
                 \normeohm{y_{\veps}^{v}\!\left({\cdot, T}\right)} < \veps.
-            \end{equation*}
+            \end{equation}
             Then, we generate sequences
             \begin{equation*}
                 {\left({{y_{0}}_{\veps}}\right)}_{\veps}\subset
@@ -433,7 +436,7 @@ regular solution to the ill-posed backwards heat equation.
             $\Ldeux{\Omega}$ and $\Vbb$, respectively.
 
             So that, there exist $\displaystyle y_{0}\in \Ldeux{\Omega}$
-            and $\displaystyle y^{v}\in \Vbb$, such as
+            and $\displaystyle y^{v}\in \Vbb$, such that
             \begin{equation*}\label{eq:proof-thm-controllability-44}
                 \begin{cases}\displaystyle
                     \begin{array}{rclll}
@@ -445,7 +448,7 @@ regular solution to the ill-posed backwards heat equation.
                     \end{array}
                 \end{cases}
             \end{equation*}
-            Thus we have on the one hand, that
+            Thus we immediately have, by continuity of the norm, that
             \begin{equation*}\label{eq:proof-thm-controllability-45}
                 \normeohm{y_{\veps}^{v}\!\left({\cdot,T}\right)} < \veps
                 \quad\text{and}\quad
@@ -454,15 +457,35 @@ regular solution to the ill-posed backwards heat equation.
                     in} & \Vbb
                 \end{array}
             \end{equation*}
-            imply, $y_{\veps}^{v}$ being almost everywhere equal to a
-            continuous mapping from $(0,T)$ to $\Ldeux{\Omega}$, that
+            imply%, $y_{\veps}^{v}$ being almost everywhere equal to a
+            % continuous mapping from $(0,T)$ to $\Ldeux{\Omega}$, that
             \begin{equation}\label{eq:proof-thm-controllability-46}
                 \begin{array}{rclll}
                     y^{v}\!\left({\cdot, T}\right) & = & 0 & \text{in} &
                     \Omega.
                 \end{array}
             \end{equation}
-            On the other hand, we have for any $\vphi\in\Dscr(Q)$ that:
+            Moreover, since $y_{\veps}^{v}\in\Vbb\subset
+            \Ldeux{0,T\,;H_{0}^{1}(\Omega)}$ and by continuity of the
+            zero-order trace operator, we have that
+            \begin{equation*}
+                \begin{array}{rclll}
+                    y_{\veps}^{v} & = & 0 & \text{on} & \Sigma
+                \end{array}
+                \qquad\text{and}\qquad
+                \begin{array}{rclll}
+                    y_{\veps}^{v} & \longrightarrow & y^{v} & \text{weakly
+                    in} & \Vbb
+                \end{array}
+            \end{equation*}
+            imply
+            \begin{equation}\label{eq:proof-thm-controllability-47}
+                \begin{array}{rclll}
+                    y^{v} & = & 0 & \text{on} & \Sigma.
+                \end{array}
+            \end{equation}
+            Now, let us multiply~\eqref{eq:proof-thm-controllability-42} by
+            $\vphi\in \Dscr(Q)$ and integrate by parts over $Q$; we get
             \begin{equation*}
                 \begin{split}
                     {} & \primetemps{y_{\veps}^{v}} - \Delta y_{\veps}^{v}
@@ -486,16 +509,10 @@ regular solution to the ill-posed backwards heat equation.
                         y_{\veps}^{v}
                     }{%
                         \Delta\vphi{}
-                    } - \scalaires{%
-                        \deriveenormale{y_{\veps}^{v}}
-                    }{%
-                        \vphi{}
-                    }\\
-                    &\qquad\qquad\qquad = \scalaireq{v}{\vphi},
+                    } = \scalaireq{v}{\vphi},
                 \end{split}
             \end{equation*}
-            so, by passing to the limit, with the continuity of the zero
-            and one order trace operators,
+            which gives, by passing to the limit,
             \begin{equation*}
                 \begin{split}
                     {} & \scalaireohm{%
@@ -515,10 +532,6 @@ regular solution to the ill-posed backwards heat equation.
                         y^{v}
                     }{%
                         \Delta\vphi{}
-                    } - \scalaires{%
-                        \deriveenormale{y^{v}}
-                    }{%
-                        \vphi{}
                     } = \scalaireq{v}{\vphi}\\
                     &\qquad \iff \scalaireohm{%
                         \condinitiale{y^{v}} - y_{0}
@@ -528,16 +541,11 @@ regular solution to the ill-posed backwards heat equation.
                         \primetemps{y^{v}} - \Delta y^{v}
                     }{%
                         \vphi{}
-                    }\\
-                    &\qquad\qquad - \scalaires{%
-                        y^{v}
-                    }{%
-                        \deriveenormale{\vphi}
                     } = \scalaireq{v}{\vphi}.
                 \end{split}
             \end{equation*}
             This last equality being valid for any $\vphi\in\Dscr(Q)$, it
-            follows that
+            follows with~\eqref{eq:proof-thm-controllability-47} that
             \begin{equation*}
                 \begin{cases}\displaystyle
                     \begin{array}{rclll}

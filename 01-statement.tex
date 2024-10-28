@@ -46,10 +46,8 @@ Supposing that the set $\Ascr$ is non-empty, we introduce the cost function
 \begin{equation}\label{eq:initial-cost-function}
     J(v,z) = \dfrac{1}{2}\normecq{z - z_{d}} + \dfrac{N}{2}\normecq{v},
 \end{equation}
-where $z_{d}\in\Ldeux{Q}$ and $N > 0$.
-
-Then, we are interested in the control problem which consists in finding
-the control-state pair
+where $z_{d}\in\Ldeux{Q}$ and $N > 0$, and we are interested in the control
+problem which consists in finding the control-state pair
 \begin{equation}\label{eq:initial-control-problem}
     (u,y)\in\Ascr:\quad J(u,y) = \inf_{(v,z)\in \Ascr}\,J(v,z).
 \end{equation}
@@ -83,37 +81,14 @@ $(u,y)$ is characterized by
 We now focus on the characterization of the optimal pair $(u,y)$ through a
 strong and decoupled singular optimality system.
 
-A classic method to do so is the penalization method introduced by
-J.~L.~Lions in~\cite{lions2}. This one consists of approaching the optimal
-control-state pair $(u,y)$ by a penalized problem. More precisely, for
-$\veps > 0$, we define the penalized cost function
-\begin{equation*}\label{eq:penalized-cost-function}
-    J_{\veps}\!\left({v,z}\right) = J(v,z) + \dfrac{1}{\veps}\normecq{%
-        \primetemps{z} - \Delta z - v
-    }.
-\end{equation*}
-We then establish that the optimal control-state pair
-$\left({u_{\veps},z_{\veps}}\right)$ corresponding to this last cost
-function converges towards the optimal control-state pair $(u,y)$. We
-therefore have a theoretical approximation process for the optimal pair
-$(u,y)$. Thanks to the first-order Euler-Lagrange optimality condition, we
-characterize the approached optimal control-state pair
-$\left({u_{\veps},y_{\veps}}\right)$ by a system of variational
-inequalities which we interpret as an approached optimality system after
-introducing the approached adjoint state
-\begin{equation*}
-    p_{\veps} = -\dfrac{1}{\veps}\left({%
-        \primetemps{y_{\veps}} - \Delta y_{\veps} - u_{\veps}
-    }\right).
-\end{equation*}
-The main step of this technique is the use of the \textit{a priori}
-estimation method to obtain a strongly decoupled optimality system by
-passing to the limit in the approached optimality system. But this final
-step requires the Slater-type assumption that
+To do so, J.~L.~Lions proposed in~\cite{lions2}, the penalization method.
+This approach allows well to achieve this, but requires resorting to the
+Slater-type assumption that
 \begin{equation}\label{eq:slater-type-assumption}
     \text{“the set of admissible controls }{\Uscr}_{ad}\ \text{is of non
     empty interior in}\ \Ldeux{Q}\text{”}.
 \end{equation}
+
 But in many situations, the Slater-type assumption does not hold; for
 example in the case
 \begin{equation*}
@@ -121,94 +96,38 @@ example in the case
         v\in\Ldeux{Q}:\ v\geq 0
     }\right\}.
 \end{equation*}
-It therefore appears relevant to know how to do without this unrealistic
-assumption.
+It therefore appears relevant to know how to do without this assumption, an
+unrealistic assumption in the opinion of some authors.
 
 For this purpose,  R.~Dorville, O.~Nakoulima and A.~Omrane propose
 in~\cite{dorville}, the notion of least regrets control, applied to a
 regularized elliptic state equation with missing data. An approach that
-allows them to characterize the least regrets control $u^{\gamma}$ through
-a strong and decoupled singular optimality system. This, certainly without
-recourse to the Slater-type assumption~\eqref{eq:slater-type-assumption},
-but to the detriment of the final condition
+allows them to characterize the least regrets control through a strong and
+decoupled singular optimality system. This, certainly without recourse to
+the Slater-type assumption~\eqref{eq:slater-type-assumption}, but to the
+detriment of the final condition. So that, the no-regret control thus
+obtained does not satisfy the final condition
 \begin{equation*}
     \begin{array}{rclll}
-        \condfinale{y^{\gamma}} & = & 0 & \text{in} & \Omega.
+        \condfinale{y} & = & 0 & \text{in} & \Omega.
     \end{array}
 \end{equation*}
-That is to say, more precisely, that the state $y^{\gamma}$ associated with
-the least regrets control $u^{\gamma}$ is such that, in all generality,
-\begin{equation*}
-    \begin{array}{rclll}
-        \condfinale{y^{\gamma}} & \neq & 0 & \text{in} & \Omega.
-    \end{array}
-\end{equation*}
-In response to this problem, the authors introduce the notion of zero-order
-corrector, which calls for the regularity assumption
-\begin{equation}\label{eq:dorvilleassumption}
-    \condfinale{y^{\gamma}}\in H_{0}^{1}(\Omega):\
-    \primetemps{y^{\gamma}}\in \Ldeux{Q}.
-\end{equation}
-This last one allows them to obtain the characterization, specified below,
-of the initial optimal control-state pair.
+So therefore, to the best of our knowledge, the problem remains, in all
+generality, globally open.
 
-\begin{theoreme}[cf.~\cite{dorville}]%
-    The no-regret control $u$ of the
-    problem~\eqref{eq:initial-problem}\eqref{eq:initial-cost-function}\eqref{eq:initial-control-problem}
-    is characterized by the unique $\left\{{u,y,\rho,p,\xi}\right\}$
-    solution of the system:
-    \begin{equation}
-        \begin{cases}\displaystyle
-            \begin{array}{rclrclrclrclll}
-                Ly & = & u, & L\rho & = & 0, & L^{*}p & = & y - z_{d} +
-                \rho, & L^{*}\xi & = & y & \text{in} & Q,\\
-                y & = & 0, & \rho & = & 0, & p & = & 0, & \xi & = & 0, &
-                \text{on} & \Sigma,\\
-                y(0) & = & 0, & \rho(0) & = & \lambda(0) & {} & {} & {} &
-                {} & {} & {} & \text{in} & \Omega,\\
-                {} & {} & {} & {} & {} & {} & p(T) & = & 0 & \xi(T) & = & 0
-                & \text{in} & \Omega,
-            \end{array}
-        \end{cases}
-    \end{equation}
-    and we have the variational inequality
-    \begin{equation}
-        \begin{array}{rcll}
-            \scalaire{p + Nu}{v - u}{} & \geq & 0 & \forall\,v\in\uad,
-        \end{array}
-    \end{equation}
-    with
-    \begin{equation*}
-        \left|{%
-            \begin{array}{l}
-                L = \primetemps{} - \Delta\quad\text{and}\quad L^{*} =
-                -\primetemps{} - \Delta\quad\text{its adjoint operator};\\
-                u, y, p, \rho, \xi\in \Ldeux{]0,T[;\Ldeux{\Omega}},\quad
-                \lambda(0)\in\Ldeux{\Omega}.
-            \end{array}
-        }\right.
-    \end{equation*}
-\end{theoreme}
-
-Ultimately, the no-regret control thus obtained does not satisfy the final
-condition
-\begin{equation*}
-    \begin{array}{rclll}
-        \condfinale{y} & = & 0 & \text{in} & \Omega,
-    \end{array}
-\end{equation*}
-so that, in all generality, the problem remains, to the best of our
-knowledge, globally open.
-
-We propose in this paper the controllability method for the analysis,
-without recourse to the Slater-type
-assumption~\eqref{eq:slater-type-assumption}, of the control problem of the
-ill-posed backwards heat equation. Note that this method has made it
-possible to propose
+Hence the proposal we make here to use the controllability method for the
+analysis of the problem. This method has made it possible to propose
 in~\cite{ownElliptic},~\cite{ownAAA},~\cite{ownParabolic}
 and~\cite{ownhyperbolic}, an answer to the same question of the control,
 without recourse to~\eqref{eq:slater-type-assumption}, of ill-posed Cauchy
-system for elliptic, parabolic and hyperbolic operators.
+system for elliptic, parabolic and hyperbolic operators. This point of view
+consists in interpreting the initial problem as an inverse problem (a
+controllability problem), which we approach, by density argument, by a
+sequence of well-posed problems. This induces a regularization method
+which, it seems to us, provides an answer to the question of controlling,
+without recourse to the Slater-type
+assumption~\eqref{eq:slater-type-assumption}, the ill-posed backwards heat
+equation.
 
 The rest of this paper is as follows. Section~\ref{sec:controllability}
 is devoted to the announced interpretation of the initial problem as an

@@ -60,8 +60,8 @@ with the estimate
     } < \veps.
 \end{equation*}
 Assuming that the optimal solution $(u,y)$
-for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} is such
-that $\displaystyle \condinitiale{y}\in\Ldeux{\Omega}$, we introduce the
+for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82} satisfies
+$\displaystyle \condinitiale{y}\in\Ldeux{\Omega}$, we introduce the
 functional
 \begin{equation*}
     J_{\veps}(v) = \dfrac{1}{2}\normecq{y_{\veps}^{v} - z_{d}} +
@@ -78,8 +78,15 @@ The following result is then immediate.
 
 \begin{proposition}%
     For any $\veps > 0$, the control problem~\eqref{eq:control87} admits a
-    unique solution: the approached optimal control-state pair $\bareps{u}$.
+    unique solution: the approached optimal control $\bareps{u}$.
 \end{proposition}
+
+\begin{remarque}%
+    The assumption that the optimal control-state pair $(u,y)$
+    for~\eqref{eq:control80}\eqref{eq:control81}\eqref{eq:control82}
+    satisfies $\displaystyle \condinitiale{y}\in \Ldeux{\Omega}$ is
+    supported by the results obtained in~\cite{dorville}.
+\end{remarque}
 
 \subsection{Convergence of the method}\label{sec:convergence}
 
@@ -104,14 +111,14 @@ satisfying
     \end{cases}
 \end{equation}
 and the estimate
-\begin{equation*}
+\begin{equation}
     \normeohm{\condfinale{\bareps{y}} } < \veps,
-\end{equation*}
+\end{equation}
 with
-\begin{equation*}
+\begin{equation}
     J_{\veps}\!\left({\bareps{u}}\right)\leq J_{\veps}(v),\quad
     \forall\,v\in\uad.
-\end{equation*}
+\end{equation}
 In particular
 \begin{equation}\label{eq:control92}
     J_{\veps}\!\left({\bareps{u}}\right) \leq J_{\veps}(u),
@@ -196,7 +203,26 @@ to
         {\hat{y}}_{0} & = & \condinitiale{y} & \text{in} & \Omega.
     \end{array}
 \end{equation}
-Then it comes, with~\eqref{eq:control89}, that for any $\vphi\in\Dscr(Q)$,
+Moreover and once again, since $\displaystyle y_{\veps}^{v}\in \Vbb\subset
+\Ldeux{0,T\,; H_{0}^{1}(\Omega)}$ and by continuity of the zero-order trace
+operator, we have that
+\begin{equation*}
+    \begin{array}{rclll}
+        \bareps{y} & = & 0 & \text{on} & \Sigma
+    \end{array}\qquad\text{and}\qquad
+    \begin{array}{rclll}
+        \bareps{y} & \longrightarrow & \hat{y} & \text{weakly in} &
+        \Ldeux{Q}
+    \end{array}
+\end{equation*}
+lead to
+\begin{equation}\label{eq:new-convergence-34}
+    \begin{array}{rclll}
+        \hat{y} & = & 0 & \text{on} & \Sigma.
+    \end{array}
+\end{equation}
+Now, let us multiply~\eqref{eq:control89} by $\vphi\in\Dscr(Q)$, and
+integrate by parts over $Q$; we obtain
 \begin{equation*}
     \begin{split}
         \scalaireq{\primetemps{\bareps{y}}}{\vphi} &- \scalaireq{%
@@ -247,10 +273,6 @@ Then it comes, with~\eqref{eq:control89}, that for any $\vphi\in\Dscr(Q)$,
             \bareps{y}
         }{%
             \Delta\vphi%
-        } - \scalaires{%
-            \deriveenormale{\bareps{y}}
-        }{%
-            \vphi%
         } = \scalaireq{\bareps{u}}{\vphi},
     \end{split}
 \end{equation*}
@@ -273,11 +295,6 @@ which gives, passing to the limit,
             \hat{y}
         }{%
             \Delta\vphi%
-        }\\
-        &\qquad - \scalaires{%
-            \deriveenormale{\hat{y}}
-        }{%
-            \vphi%
         } = \scalaireq{\hat{u}}{\vphi}\\
         &\iff \scalaireohm{%
             \condinitiale{\hat{y}} - {\hat{y}}_{0}
@@ -287,15 +304,10 @@ which gives, passing to the limit,
             \primetemps{\hat{y}} - \Delta\hat{y}
         }{%
             \vphi%
-        }\\
-        &\qquad - \scalaires{%
-            \hat{y}
-        }{%
-            \deriveenormale{\vphi}
         } = \scalaireq{\hat{u}}{\vphi},
     \end{split}
 \end{equation*}
-\ie{}
+which gives, with~\eqref{eq:new-convergence-34}, that
 \begin{equation}\label{eq:control102}
     \begin{cases}\displaystyle
         \begin{array}{rclll}
@@ -309,7 +321,7 @@ which gives, passing to the limit,
         \end{array}
     \end{cases}
 \end{equation}
-Moreover, the norm $\normeohm{\cdot}$ being continuous, \textit{a fortiori}
+Furthermore, the norm $\normeohm{\cdot}$ being continuous, \textit{a fortiori}
 weakly continuous,
 \begin{equation*}
     \begin{array}{rclll}
@@ -318,7 +330,7 @@ weakly continuous,
     \end{array}\qquad\text{and}\qquad
     \normeohm{\condfinale{\bareps{y}}} < \veps
 \end{equation*}
-bring
+lead to
 \begin{equation}\label{eq:control103}
     \begin{array}{rclll}
         \condfinale{\hat{y}} & = & 0 & \text{in} & \Omega.
